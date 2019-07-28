@@ -1,0 +1,7 @@
+#!/bin/sh
+
+curl -fLSs https://circle.ci/cli | sudo bash
+
+gem install bundler
+
+bundle install
