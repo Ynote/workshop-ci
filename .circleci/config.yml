@@ -8,3 +8,6 @@ jobs:
       - run:
           name: Install project dependencies
           command: bin/install
+      - run:
+          name: Test the project
+          command: bundle exec rspec hello_world_spec.rb
