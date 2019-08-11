@@ -3,6 +3,9 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.6.3
+    environment:
+      BUNDLE_PATH: vendor/bundle
+
     steps:
       - checkout
       - run:
