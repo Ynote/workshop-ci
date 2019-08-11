@@ -8,9 +8,15 @@ jobs:
 
     steps:
       - checkout
+      - restore_cache:
+          key: bundler-{{ checksum "Gemfile.lock" }}
       - run:
           name: Install project dependencies
           command: bin/install
       - run:
           name: Test the project
           command: bundle exec rspec hello_world_spec.rb
+      - save_cache:
+          key: bundler-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle

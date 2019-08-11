@@ -5,4 +5,4 @@ curl -fLSs https://circle.ci/cli | sudo bash
 # Install Bundler version shipped with Ruby 2.6.3
 gem install bundler -v 1.17.2
 
-bundle install
+bundle check || bundle install
