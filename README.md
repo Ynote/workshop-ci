@@ -10,21 +10,23 @@ l'installation d'un CI. L'atelier étant préparé dans le cadre de
 [Paris Web](https://www.paris-web.fr/) 2019, le contenu sera entièrement écrit
 en français. Toute traduction est la bienvenue.
 
-## Implémentation basique avec Codeship
+## Introduction
 
-- Création d'un [compte Codeship](https://codeship.com/).
-- Ajout des commandes directement dans l'interface de Codeship.
+Nous allons expliquer les concepts de :
+- intégration continue,
+- livraison continue,
+- déploiement continu.
 
-## Implémentation basique avec Circle CI
+## Mise en place d'un premier CI basique
 
-Nous allons implémenter CircleCI sur un projet en Ruby pour comprendre la
-mécanique de base d'un CI :
+Nous allons mettre en place ensemble un CI basique sur Codeship
+[en suivant ce tutoriel](/docs/codeship/basic-ci_FR.md).
 
-- Création d'un [compte CircleCI](https://circleci.com/).
-- Ajout du projet via le fork du dépôt Git.
-- [Ajout d'une configuration
-  CircleCI](https://github.com/Ynote/workshop-ci/pull/2).
-- [Mise à jour de la configuration
-  CircleCI](https://github.com/Ynote/workshop-ci/pull/3).
-- [Ajout de test sur la configuration
-  CircleCI](https://github.com/Ynote/workshop-ci/pull/4).
+## Pour aller plus loin
+
+Nous vous proposons de creuser vous-même les problématiques qui vous
+intéressent. Plusieurs tutoriels sont à votre disposition en fonction de votre
+envie :
+
+- Mise en place d'un CI basique avec CircleCI
+- Gestion des données persistentes (cache) avec CircleCI
