@@ -14,11 +14,18 @@ jobs:
           key: bundler-{{ checksum "Gemfile.lock" }}
           paths:
             - /usr/local/bundle
+      - persist_to_workspace:
+          root: /usr/local
+          paths:
+            - bundle
+
   test:
     docker:
       - image: circleci/ruby:2.6.3
     steps:
       - checkout
+      - attach_workspace:
+          at: /usr/local
       - run:
           name: Test the project
           command: bundle exec rspec hello_world_spec.rb
