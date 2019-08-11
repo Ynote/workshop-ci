@@ -17,7 +17,7 @@ environnement de développement rapidement et de pouvoir suivre pas à pas les
 
 ## Fork du projet tutoriel
 
-Aller sur https://github.com/Ynote/workshop-circle-ci_ruby-setup-example et
+Allez sur https://github.com/Ynote/workshop-circle-ci_ruby-setup-example et
 cliquez sur le bouton `fork` pour avoir un fork de ce dépôt Git sur votre compte
 personnel GitHub.
 
