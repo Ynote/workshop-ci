@@ -49,3 +49,73 @@ Puis, choisissez l'option de base pour le type de projet :
   <img width="1002" alt="Screenshot 2019-08-11 at 18 54 53"
   src="https://user-images.githubusercontent.com/548778/62837210-47964b80-bc6d-11e9-9848-846db76a1d45.png">
 </p>
+
+## Configuration du CI
+
+Dans l'étape suivante, nous allons configurer le CI.
+
+Par défaut, dans l'offre basique de Codeship, le code est lancé sur [une machine
+Ubuntu](https://documentation.codeship.com/general/about/vm-and-infrastructure)
+avec plusieurs langages par défaut installés dessus.
+
+- puis, créer un "pipeline" pour lui indiquer les étapes suivantes de notre
+  intégration continue.
+
+Dans un premier temps, nous allons indiquer à Codeship quelles commandes sont
+nécessaires pour installer les dépendances de notre application. Pour cela, dans
+la section `Setup commands`, écrivez :
+```
+bin/install
+```
+
+<p align="center">
+  <img width="1414" alt="Screenshot 2019-08-11 at 18 55 21"
+src="https://user-images.githubusercontent.com/548778/62837306-5cbfaa00-bc6e-11e9-8e21-7ceca5cfaf25.png">
+</p>
+
+Ensuite, nous allons créer un "pipeline". Dans Codeship, un "pipeline" est un
+ensemble de commandes qui sont lancés à chaque fois qu'une modification apparait
+sur votre dépôt Git (nouvelle branche, nouveau commit, etc.). Pour cela, cliquez
+sur le lien `Add pipeline` et donnez un nom à votre "pipeline" :
+
+<p align="center">
+  <img width="1422" alt="Screenshot 2019-08-11 at 18 55 41"
+  src="https://user-images.githubusercontent.com/548778/62837370-f8e9b100-bc6e-11e9-9c7c-f679f4db2328.png">
+</p>
+
+Puis, cliquez sur le lien `Save changes` :
+
+<p align="center">
+  <img width="339" alt="Screenshot 2019-08-11 at 18 55 59"
+  src="https://user-images.githubusercontent.com/548778/62837384-11f26200-bc6f-11e9-8dcb-562a6a877795.png">
+</p>
+
+Un nouveau panneau avec votre "pipeline" a été créé. Dans ce dernier, écrivez la
+commande pour lancer les tests sur notre projet :
+```
+bundle exec rspec hello_world_spec.rb
+```
+
+<p align="center">
+  <img width="1410" alt="Screenshot 2019-08-11 at 19 37 24"
+src="https://user-images.githubusercontent.com/548778/62837422-83caab80-bc6f-11e9-9c7a-b5a993c65de7.png">
+</p>
+
+Puis, cliquez sur `Save and go to dashboard` :
+
+<p align="center">
+  <img width="350" alt="Screenshot 2019-08-11 at 19 39 34"
+  src="https://user-images.githubusercontent.com/548778/62837453-d6a46300-bc6f-11e9-90a2-4888ef1ee174.png">
+</p>
+
+Voilà, la configuration de votre intégration continue est prête !
+
+
+
+
+
+
+
+
+
+
