@@ -8,14 +8,15 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: bundler-{{ checksum "Gemfile.lock" }}
+          key: test-bundler-{{ checksum "Gemfile.lock" }}
       - run:
           name: Install project dependencies
           command: bin/install
       - save_cache:
-          key: bundler-{{ checksum "Gemfile.lock" }}
+          key: test-bundler-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
+            - ~/.bundle
       - persist_to_workspace:
           root: .
           paths:
