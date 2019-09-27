@@ -155,6 +155,36 @@ configuration :
    Note : pour d'autres languages, informez-vous de la commande à utiliser avec
    votre gestionnaire de dépendances.
 
+## Vérifier l'exécution sur Circle CI
+
+### Dans le cas où les dépendances nécessaires sont déjà mises en cache
+
+1. Si une clé de cache existe pour les dépendances fixées dans le
+   `Gemfile.lock`, l'outil va récupérer ces données et les ranger dans les
+   dossiers adéquats :
+
+   <p align="center">
+     <img width="1331" alt="Screenshot 2019-09-27 at 18 28 59"
+     src="https://user-images.githubusercontent.com/548778/65785748-671e0080-e155-11e9-8421-297dc4524532.png">
+   </p>
+
+2. Comme les dépendances ont été récupérées, seule l'installation du
+   gestionnaire de dépendance Bundler va être lancée. Le reste des dépendances
+   est déjà prêt :
+
+   <p align="center">
+     <img width="1335" alt="Screenshot 2019-09-27 at 18 30 55"
+     src="https://user-images.githubusercontent.com/548778/65786001-fd522680-e155-11e9-83bc-180a8b912234.png">
+   </p>
+
+3. Les dépendances nécessaires étant déjà mises en cache, la sauvegarde des
+   données en cache n'a pas d'utilité :
+
+   <p align="center">
+     <img width="1331" alt="Screenshot 2019-09-27 at 18 31 57"
+     src="https://user-images.githubusercontent.com/548778/65786112-368a9680-e156-11e9-990a-300a1bee8246.png">
+   </p>
+
 ## Ressources
 
 - [Caching Dependencies with CircleCI](https://circleci.com/docs/2.0/caching/)
