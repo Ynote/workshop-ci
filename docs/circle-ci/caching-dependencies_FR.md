@@ -1,4 +1,4 @@
-# Utiliser des données persistentes sur Circle CI
+# La mise en cache de dépendances sur Circle CI
 
 **Objectif** : ce tutoriel présente comment gérer la mise en cache de données,
 principalement celles issues des dépendances de votre projet, afin de permettre
