@@ -109,6 +109,52 @@ configuration :
 
 ## Récupérer les données mises en cache pour un job donné
 
+> Pour que la mise en cache des dépendances ait une utilité, il faut à la fois
+  récupérer les données mise en cache auparavant et permettre de ne pas
+  installer les dépendances si ces dernières existent déjà.
+
+1. Récupérez les données mise en cache avant l'installation de vos dépendances :
+
+   ```diff
+   version: 2
+   jobs:
+     build:
+       docker:
+         - image: circleci/ruby:2.6.3
+       environment:
+         BUNDLE_PATH: vendor/bundle
+
+       steps:
+         - checkout
+   +      - restore_cache:
+   +          key: bundler-{{ checksum "Gemfile.lock" }}
+         - run:
+             name: Install project dependencies
+             command: bin/install
+         - run:
+             name: Test the project
+             command: bundle exec rspec hello_world_spec.rb
+         - save_cache:
+             key: bundler-{{ checksum "Gemfile.lock" }}
+             paths:
+               - vendor/bundle
+   ```
+   - la clé `restore_cache` indique à Circle CI qu'il faut aller récupérer les
+     données mise en cache sous la clé de cache `key`. Ces données seront
+     rangées dans les mêmes dossiers indiquées dans save_cache.paths`.
+
+2. Indiquez au gestionnaire de dépendances Bundler de ne pas installer les
+   dépendances si elles existent déjà. Dans `bin/install`, ajoutez la commande
+   `bundle check` qui permet de faire cette vérification :
+
+   ```diff
+   -bundle install
+   +bundle check || bundle install
+   ```
+
+   Note : pour d'autres languages, informez-vous de la commande à utiliser avec
+   votre gestionnaire de dépendances.
+
 ## Ressources
 
 - [Caching Dependencies with CircleCI](https://circleci.com/docs/2.0/caching/)
