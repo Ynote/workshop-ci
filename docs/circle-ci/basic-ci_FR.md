@@ -1,9 +1,15 @@
 # Implémentation basique avec Circle CI
 
-> Ce tutoriel présente les premières étapes pour mettre en place une intégration
+**Objectif** : ce tutoriel présente les premières étapes pour mettre en place une intégration
 continue avec Circle CI sur un de vos projets. Il vous permettra de créer
 l'environnement nécessaire pour lancer un simple `echo` sur Circle CI.
 
+**Niveau** : débutant.
+
+**Pré-requis** :
+- Un compte GitHub.
+
+## Table des matières
 - [Création du compte](#création-du-compte)
 - [Ajout d'un projet](#ajout-dun-projet)
 - [Configuration du CI](#configuration-du-ci)
