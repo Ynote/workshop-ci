@@ -22,6 +22,7 @@ Circle CI.
 - [Récupérer les données mises en cache pour un job
   donné](#récupérer-les-données-mises-en-cache-pour-un-job-donné)
 - [Vérifier l'exécution sur Circle CI](#vérifier-lexécution-sur-circle-ci)
+- [Les effets de bord](#les-effets-de-bord)
 - [Ressources](#ressources)
 
 ## Qu'est-ce que la mise en cache ?
@@ -160,7 +161,33 @@ configuration :
 
 ## Vérifier l'exécution sur Circle CI
 
-### Dans le cas où les dépendances nécessaires sont déjà mises en cache
+### Les dépendances nécessaires n'ont pas encore été mise en cache
+
+1. Si une clé de cache correspondante aux dépendances nécessaires n'existe pas,
+   l'outil ne récupère aucune donnée:
+
+   <p align="center">
+     <img width="1328" alt="Screenshot 2019-09-27 at 18 45 47"
+     src="https://user-images.githubusercontent.com/548778/65786606-4a82c800-e157-11e9-8a95-9935138e88eb.png">
+   </p>
+
+2. Les dépendances n'étant pas installées, le gestionnaire de dépendances va
+   installer toutes les librairies nécessaires à votre projet :
+
+   <p align="center">
+     <img width="1320" alt="Screenshot 2019-09-27 at 18 46 06"
+     src="https://user-images.githubusercontent.com/548778/65786767-a2213380-e157-11e9-9289-7df018b44d84.png">
+   </p>
+
+3. Les dépendances installées n'ayant jamais été mises en cache auparavant,
+   l'outil va enclencher la sauvegarde de ces données :
+
+   <p align="center">
+     <img width="1331" alt="Screenshot 2019-09-27 at 18 46 15"
+     src="https://user-images.githubusercontent.com/548778/65786819-c9780080-e157-11e9-9c53-51b7b8969742.png">
+   </p>
+
+### Les dépendances nécessaires sont déjà mises en cache
 
 1. Si une clé de cache existe pour les dépendances fixées dans le
    `Gemfile.lock`, l'outil va récupérer ces données et les ranger dans les
@@ -187,6 +214,15 @@ configuration :
      <img width="1331" alt="Screenshot 2019-09-27 at 18 31 57"
      src="https://user-images.githubusercontent.com/548778/65786112-368a9680-e156-11e9-990a-300a1bee8246.png">
    </p>
+
+## Les effets de bord
+
+La mise en cache peut permettre une meilleure performance de votre intégration
+continue. Néanmoins, il faut prendre en compte les effets de bord possibles.
+
+### Mauvais choix de clé de cache
+
+### Mise à jour de votre gestionnaire de dépendances
 
 ## Ressources
 
