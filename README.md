@@ -32,8 +32,16 @@ Nous allons expliquer les concepts de :
 
 ### 2. Mise en place d'une intégration continue très basique
 
-Nous allons mettre en place ensemble un CI basique sur Codeship
-[en suivant ce tutoriel](/docs/codeship/basic-ci_FR.md).
+Nous vous proposons de mettre en place tous ensemble une intégration continue sur
+ce présent projet avec [Codeship](https://codeship.com/). Le projet de ce dépôt
+contient :
+- un simple fichier écrit en Ruby
+  `[hello_world.rb](https://github.com/Ynote/workshop-ci/blob/master/hello_world.rb)`,
+- un fichier de test associé
+  `[hello_world_spec.rb](https://github.com/Ynote/workshop-ci/blob/master/hello_world_spec.rb)`.
+
+Il n'est pas nécessaire de connaître le langage Ruby pour pouvoir suivre ce
+tutoriel. [Allons-y pas à pas !](/docs/codeship/basic-ci_FR.md).
 
 ### 3. Aller plus loin selon vos envies
 
