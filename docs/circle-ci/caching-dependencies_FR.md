@@ -16,9 +16,12 @@ Circle CI.
 
 ## Sommaire
 
-- [Qu'est-ce que la mise en cache ?]()
-- [Enregistrer des données à mettre en cache pour un job donné]()
-- [Récupérer les données mises en cache pour un job donné]()
+- [Qu'est-ce que la mise en cache ?](#quest-ce-que-la-mise-en-cache-)
+- [Enregistrer des données à mettre en cache pour un job
+  donné](#enregistrer-des-données-à-mettre-en-cache-pour-un-job-donné)
+- [Récupérer les données mises en cache pour un job
+  donné](#récupérer-les-données-mises-en-cache-pour-un-job-donné)
+- [Vérifier l'exécution sur Circle CI](#vérifier-lexécution-sur-circle-ci)
 - [Ressources](#ressources)
 
 ## Qu'est-ce que la mise en cache ?
