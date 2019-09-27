@@ -146,8 +146,9 @@ L'environnement de test est prêt. Maintenant, il faut pouvoir lancer les tests 
 
 1. Installez les dépendances nécessaires à votre projet pour lancer les tests.
    Pour cela, mettez à jour la commande de la clé `run` dans votre fichier de
-   configuration. Remplacer le `echo` avec la commande pour installer les
+   configuration. Remplacez le `echo` avec la commande pour installer les
    dépendances dans `.circleci/config.yml` :
+
    ```diff
    version: 2
    jobs:
@@ -161,7 +162,31 @@ L'environnement de test est prêt. Maintenant, il faut pouvoir lancer les tests 
    +          name: Install project dependencies
    +          command: bin/install
    ```
+   - la commande `run` peut prendre directement une commande ou un objet
+     clé-valeur qui définit la commande et le nom de la commande. Cela permet
+     des étapes nommées dans l'interface de Circle CI :
 
+     <p align="center">
+       <img width="1338" alt="Screenshot 2019-09-27 at 16 49 31"
+       src="https://user-images.githubusercontent.com/548778/65778805-d93b1900-e146-11e9-98ff-3d69116798de.png">
+     </p>
+
+2. Ajoutez la commande pour les tests de votre projet :
+
+   ```diff
+   version: 2
+   jobs:
+     build:
+       docker:
+         - image: circleci/ruby:2.6.3
+       steps:
+         - checkout
+         - run:
+             name: Install project dependencies
+             command: bin/install
+   +      - run:
+   +          name: Test the project
+   +          command: bundle exec rspec hello_world_spec.rb
 
 Voilà, la configuration de votre intégration continue est prête ! Vous pouvez
 ajouter davantage d'étapes et d'options en suivant les autres modules proposés
