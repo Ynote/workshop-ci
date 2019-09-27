@@ -14,7 +14,7 @@ projet personnel.
 
 **Pré-requis** : un compte GitHub.
 
-## Table des matières
+## Sommaire
 - [Création du compte](#création-du-compte)
 - [Ajout d'un projet](#ajout-dun-projet)
 - [Configuration du CI](#configuration-du-ci)

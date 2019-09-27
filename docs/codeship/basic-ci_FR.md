@@ -9,7 +9,7 @@ de créer l'environnement nécessaire pour lancer un test ou une suite de tests
 
 **Pré-requis** : un compte GitHub.
 
-## Table des matières
+## Sommaire
 - [Création du compte CodeShip](#création-du-compte-codeship)
 - [Ajout d'un projet](#ajout-dun-projet)
 - [Configuration du CI](#configuration-du-ci)
