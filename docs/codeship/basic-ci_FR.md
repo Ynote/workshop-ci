@@ -1,7 +1,7 @@
-# L'intégration continue avec Codeship
+# L'intégration continue avec CodeShip
 
 **Objectif** : ce tutoriel présente les premières étapes pour mettre en place
-une intégration continue avec Codeship sur un de vos projets. Il vous permettra
+une intégration continue avec CodeShip sur un de vos projets. Il vous permettra
 de créer l'environnement nécessaire pour lancer un test ou une suite de tests
 à chaque nouveau commit sur une branche nouvelle ou existante de votre projet.
 
@@ -10,12 +10,12 @@ de créer l'environnement nécessaire pour lancer un test ou une suite de tests
 **Pré-requis** : un compte GitHub.
 
 ## Table des matières
-- [Création du compte Codeship](#création-du-compte-codeship)
+- [Création du compte CodeShip](#création-du-compte-codeship)
 - [Ajout d'un projet](#ajout-dun-projet)
 - [Configuration du CI](#configuration-du-ci)
 - [Ressources](#ressources)
 
-## Création du compte Codeship
+## Création du compte CodeShip
 
 1. Allez sur l'url https://app.codeship.com/sessions/new et connectez-vous avec
 votre compte GitHub:
@@ -25,7 +25,7 @@ votre compte GitHub:
      src="https://user-images.githubusercontent.com/548778/62837132-1ec18680-bc6c-11e9-84db-4544cde8afc1.png">
    </p>
 
-2. Dans la fenêtre de permission pour ajouter l'application Codeship, renseignez le
+2. Dans la fenêtre de permission pour ajouter l'application CodeShip, renseignez le
 dépôt Git que nous venons de forker et validez l'installation :
 
    <p align="center">
@@ -35,11 +35,11 @@ dépôt Git que nous venons de forker et validez l'installation :
 
 ## Ajout d'un projet
 
-> Pour permettre à l'outil Codeship de se lancer régulièrement en fonction de
+> Pour permettre à CodeShip de se lancer régulièrement en fonction de
 nouveaux commits sur votre projet, il faut paramétrer une connexion entre
-Codeship et votre dépôt Git sur GitHub.
+CodeShip et votre dépôt Git sur GitHub.
 
-1. Pour ajouter un projet dans Codeship, allez sur l'url
+1. Pour ajouter un projet dans CodeShip, allez sur l'url
 https://app.codeship.com/projects et cliquez sur le bouton `New project` en
 haut à droite de votre fenêtre :
 
@@ -69,7 +69,7 @@ haut à droite de votre fenêtre :
      src="https://user-images.githubusercontent.com/548778/62837210-47964b80-bc6d-11e9-9848-846db76a1d45.png">
    </p>
 
-L'offre basique de Codeship va nous permettre de lancer nos tests sur [une machine
+L'offre basique de CodeShip va nous permettre de lancer nos tests sur [une machine
 Ubuntu](https://documentation.codeship.com/general/about/vm-and-infrastructure)
 avec plusieurs langages par défaut installés dessus.
 
@@ -78,9 +78,9 @@ avec plusieurs langages par défaut installés dessus.
 > L'un des points importants pour mettre en place une intégration continue sur
 un projet, c'est de d'avoir une suite de tests solides à lancer sur un
 environnement donné. Il faut donc pouvoir installer l'environnement que l'on
-veut sur Codeship, ainsi que lancer les tests nécessaires.
+veut sur CodeShip, ainsi que lancer les tests nécessaires.
 
-1. Dans un premier temps, nous allons indiquer à Codeship quelles commandes sont
+1. Dans un premier temps, nous allons indiquer à CodeShip quelles commandes sont
 nécessaires pour installer les dépendances de notre application. Pour cela, dans
 la section `Setup commands`, écrivez :
 
@@ -93,7 +93,7 @@ la section `Setup commands`, écrivez :
      src="https://user-images.githubusercontent.com/548778/62837306-5cbfaa00-bc6e-11e9-8e21-7ceca5cfaf25.png">
   </p>
 
-2. Ensuite, nous allons créer un "pipeline". Dans Codeship, un "pipeline" est un
+2. Ensuite, nous allons créer un "pipeline". Dans CodeShip, un "pipeline" est un
 ensemble de commandes qui sont lancés à chaque fois qu'une modification apparait
 sur votre dépôt Git (nouvelle branche, nouveau commit, etc.). Pour cela, cliquez
 sur le lien `Add pipeline` et donnez un nom à votre "pipeline" :
