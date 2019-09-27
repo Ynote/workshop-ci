@@ -1,4 +1,4 @@
-# Workshop on CI implementation
+# Atelier sur l'intégration continue
 
 > This project contains all the documentation needed for a basic workshop on CI
 implementation on a project versionned with Git. As this workshop is created for
@@ -11,24 +11,36 @@ L'atelier étant préparé dans le cadre de [Paris Web](https://www.paris-web.fr
 2019, le contenu sera entièrement écrit en français. Toute traduction est la
 bienvenue.
 
-## Introduction
+Et maintenant, commençons !
+
+## Pré-requis
+
+Pour pouvoir suivre cet atelier en toute tranquilité, il vous faudra :
+- avoir une connaissance basique de Git,
+- avoir votre propre compte GitHub,
+- à partir de votre compte, créer un fork de [ce présent
+  dépôt](https://github.com/Ynote/workshop-ci).
+
+## Déroulement de l'atelier
+
+### 1. Brève (très brève) partie théorique
 
 Nous allons expliquer les concepts de :
 - intégration continue,
 - livraison continue,
 - déploiement continu.
 
-## Mise en place d'un premier CI basique
+### 2. Mise en place d'une intégration continue très basique
 
 Nous allons mettre en place ensemble un CI basique sur Codeship
 [en suivant ce tutoriel](/docs/codeship/basic-ci_FR.md).
 
-## Pour aller plus loin
+### 3. Aller plus loin selon vos envies
 
 Nous vous proposons de creuser vous-même les problématiques qui vous
 intéressent. Plusieurs tutoriels sont à votre disposition en fonction de votre
 envie :
 
-### Circle CI
+#### Circle CI
 - [Mise en place d'un CI basique](https://github.com/Ynote/workshop-ci/blob/master/docs/circle-ci/basic-ci_FR.md)
 - Gestion des données persistentes (cache)
