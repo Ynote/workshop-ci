@@ -1,8 +1,9 @@
 # Implémentation basique avec Circle CI
 
-**Objectif** : ce tutoriel présente les premières étapes pour mettre en place une intégration
-continue avec Circle CI sur un de vos projets. Il vous permettra de créer
-l'environnement nécessaire pour lancer un simple `echo` sur Circle CI.
+**Objectif** : ce tutoriel présente les premières étapes pour mettre en place
+une intégration continue avec Circle CI sur un de vos projets. Il vous permettra
+de créer l'environnement nécessaire pour lancer un test ou une suite de tests
+à chaque nouveau commit sur une branche nouvelle ou existante de votre projet.
 
 **Niveau** : débutant.
 
@@ -34,6 +35,10 @@ l'installation :
 
 ## Ajout d'un projet
 
+> Pour permettre à Circle CI de se lancer régulièrement en fonction de
+nouveaux commits sur votre projet, il faut paramétrer une connexion entre
+Circle CI et votre dépôt Git sur GitHub.
+
 Par défaut, après votre inscription, Circle CI vous propose d'ajouter un projet.
 Choisissez votre dépôt Git et cliquez sur `Follow` :
 
@@ -52,8 +57,11 @@ build sur la branche `master` est en échec :
 
 ## Configuration du CI
 
-Dans cette étape, nous allons ajouter un simple fichier de configuration sur
-votre projet pour activer le lancement de Circle CI.
+> La première étape pour mettre en place une intégration continue sur un projet,
+  c'est de configurer l'environnement dans lequel les tests vont s'exécuter.
+  Contrairement à CodeShip où la configuration de l'environnement se fait via
+  une interface web sur le site de CodeShip, la configuration de Circle CI se
+  fait directement avec un fichier dans votre projet.
 
 1. Créez une nouvelle branche `add-circle-ci-config` :
 
@@ -91,7 +99,9 @@ votre projet pour activer le lancement de Circle CI.
      - l'étape `checkout` correspond à un raccourci pour indiquer à Circle CI
        qu'il faut récupérer le dernier commit de la branche concernée avec un
        `git checkout`.
-     - la clé `run` indique à Circle CI de lancer une commande.
+     - la clé `run` indique à Circle CI de lancer une commande. Nous lançons
+       pour l'instant un simple `echo`, l'idée étant de lancer dans un second
+       temps, les tests de votre projet.
 
 3. Ajoutez ce fichier à votre projet et poussez vos modifications :
 
@@ -129,6 +139,28 @@ votre projet pour activer le lancement de Circle CI.
      <img width="1358" alt="Screenshot 2019-09-27 at 14 09 38"
      src="https://user-images.githubusercontent.com/548778/65768232-b0a82480-e130-11e9-8d5d-ab82008e6a5f.png">
    </p>
+
+L'environnement de test est prêt. Maintenant, il faut pouvoir lancer les tests !
+
+## Lancement des tests
+
+1. Installez les dépendances nécessaires à votre projet pour lancer les tests.
+   Pour cela, mettez à jour la commande de la clé `run` dans votre fichier de
+   configuration. Remplacer le `echo` avec la commande pour installer les
+   dépendances dans `.circleci/config.yml` :
+   ```diff
+   version: 2
+   jobs:
+     build:
+       docker:
+         - image: circleci/ruby:2.6.3
+       steps:
+         - checkout
+     -     - run: echo "Youpi ! On est dans la première étape de l'installation de notre CI :)"
+     +     - run:
+     +         name: Install project dependencies
+     +         command: bin/install
+   ```
 
 
 Voilà, la configuration de votre intégration continue est prête ! Vous pouvez
