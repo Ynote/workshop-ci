@@ -47,7 +47,7 @@ Une bonne clé de cache doit donc être un compromis entre :
    variable `BUNDLE_PATH` permet d'indiquer au gestionnaire de dépendances
    Bundler où installer les dépendances Ruby de votre projet.
 
-   ```yml
+   ```diff
    version: 2
    jobs:
      build:
@@ -74,7 +74,7 @@ Une bonne clé de cache doit donc être un compromis entre :
 2. Ajoutez l'enregistrement des données en cache dans votre fichier de
 configuration :
 
-   ```yml
+   ```diff
    version: 2
    jobs:
      build:
@@ -102,7 +102,7 @@ configuration :
        SHA256 encodé en base64 d'un fichier. Dans notre cas, on utilise le
        fichier `Gemfile.lock` car il contient les versions exactes des
        dépendances installées et permet donc une fiabilité sur les dépendances
-       installées dans le dossier vendor/bundle`. Par défaut, une clé de cache,
+       installées dans le dossier `vendor/bundle`. Par défaut, une clé de cache,
        si elle ne change pas, expire au bout d'un mois sur CircleCI.
      - la clé `paths` liste tous les dossiers à mettre en cache sous la clé de
        cache indiquée juste au-dessus.
