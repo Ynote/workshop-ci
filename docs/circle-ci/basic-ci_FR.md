@@ -1,4 +1,4 @@
-# Implémentation basique avec Circle CI
+# L'intégration continue avec Circle CI
 
 **Objectif** : ce tutoriel présente les premières étapes pour mettre en place
 une intégration continue avec Circle CI sur un de vos projets. Il vous permettra
@@ -194,7 +194,5 @@ dans ce dépôt.
 
 ## Ressources
 
-- [Pull request correspondante à ce
-  tutoriel](https://github.com/Ynote/workshop-ci/pull/2)
 - [Circle CI getting started
   introduction](https://circleci.com/docs/2.0/getting-started/)
