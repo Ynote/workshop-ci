@@ -51,4 +51,5 @@ envie :
 
 #### Circle CI
 - [Mise en place d'un CI basique](https://github.com/Ynote/workshop-ci/blob/master/docs/circle-ci/basic-ci_FR.md)
-- Gestion des données persistentes (cache)
+- [Mis en cache des
+  dépendances](https://github.com/Ynote/workshop-ci/blob/master/docs/circle-ci/caching-dependencies_FR.md)
