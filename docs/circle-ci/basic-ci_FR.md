@@ -2,7 +2,7 @@
 
 ## Création du compte
 
-Allez sur l'url https://circleci.com/signup/ et connectez-vous avec
+1. Allez sur l'url https://circleci.com/signup/ et connectez-vous avec
 votre compte GitHub:
 
 <p align="center">
@@ -10,7 +10,7 @@ votre compte GitHub:
   src="https://user-images.githubusercontent.com/548778/65763905-abdd7380-e124-11e9-9179-5fa1aad28fd7.png">
 </p>
 
-Dans la fenêtre de permission pour ajouter l'application Circle CI et validez
+2. Dans la fenêtre de permission pour ajouter l'application Circle CI et validez
 l'installation :
 
 <p align="center">
