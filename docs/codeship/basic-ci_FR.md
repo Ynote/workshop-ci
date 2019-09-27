@@ -64,11 +64,16 @@ haut à droite de votre fenêtre :
   src="https://user-images.githubusercontent.com/548778/62837210-47964b80-bc6d-11e9-9848-846db76a1d45.png">
 </p>
 
-## Configuration du CI
-
-Par défaut, dans l'offre basique de Codeship, le code est lancé sur [une machine
+L'offre basique de Codeship va nous permettre de lancer nos tests sur [une machine
 Ubuntu](https://documentation.codeship.com/general/about/vm-and-infrastructure)
 avec plusieurs langages par défaut installés dessus.
+
+## Configuration du CI
+
+> L'un des points importants pour mettre en place une intégration continue sur
+un projet, c'est de d'avoir une suite de tests solides à lancer sur un
+environnement donné. Il faut donc pouvoir installer l'environnement que l'on
+veut sur Codeship, ainsi que lancer les tests nécessaires.
 
 1. Dans un premier temps, nous allons indiquer à Codeship quelles commandes sont
 nécessaires pour installer les dépendances de notre application. Pour cela, dans
