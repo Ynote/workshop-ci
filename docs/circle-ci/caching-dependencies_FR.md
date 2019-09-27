@@ -22,7 +22,12 @@ Circle CI.
 - [Récupérer les données mises en cache pour un job
   donné](#récupérer-les-données-mises-en-cache-pour-un-job-donné)
 - [Vérifier l'exécution sur Circle CI](#vérifier-lexécution-sur-circle-ci)
+  - [Quand les dépendances nécessaires n'ont pas encore été mise en cache](#quand-les-dépendances-nécessaires-nont-pas-encore-été-mise-en-cache)
+  - [Quand les dépendances nécessaires sont déjà mises en
+    cache](#quand-les-dépendances-nécessaires-sont-déjà-mises-en-cache)
 - [Les effets de bord](#les-effets-de-bord)
+  - [Mauvais choix de clé de cache](#mauvais-choix-de-clé-de-cache)
+  - [Mise à jour de votre gestionnaire de dépendances](#mise-à-jour-de-votre-gestionnaire-de-dépendances)
 - [Ressources](#ressources)
 
 ## Qu'est-ce que la mise en cache ?
@@ -161,7 +166,7 @@ configuration :
 
 ## Vérifier l'exécution sur Circle CI
 
-### Les dépendances nécessaires n'ont pas encore été mise en cache
+### Quand les dépendances nécessaires n'ont pas encore été mise en cache
 
 1. Si une clé de cache correspondante aux dépendances nécessaires n'existe pas,
    l'outil ne récupère aucune donnée:
@@ -187,7 +192,7 @@ configuration :
      src="https://user-images.githubusercontent.com/548778/65786819-c9780080-e157-11e9-9c53-51b7b8969742.png">
    </p>
 
-### Les dépendances nécessaires sont déjà mises en cache
+### Quand les dépendances nécessaires sont déjà mises en cache
 
 1. Si une clé de cache existe pour les dépendances fixées dans le
    `Gemfile.lock`, l'outil va récupérer ces données et les ranger dans les
