@@ -6,8 +6,7 @@ l'environnement nécessaire pour lancer un simple `echo` sur Circle CI.
 
 **Niveau** : débutant.
 
-**Pré-requis** :
-- Un compte GitHub.
+**Pré-requis** : un compte GitHub.
 
 ## Table des matières
 - [Création du compte](#création-du-compte)

@@ -1,5 +1,15 @@
-# Implémentation basique d'un CI avec Codeship
+# L'implémentation continue avec Codeship
 
+**Objectif** : ce tutoriel présente les premières étapes pour mettre en place une intégration
+continue avec Codeship sur un de vos projets. Il vous permettra de créer
+l'environnement nécessaire pour lancer un test ou une suite de tests sur
+Codeship.
+
+**Niveau** : débutant.
+
+**Pré-requis** : un compte GitHub.
+
+## Table des matières
 - [Création du compte Codeship](#création-du-compte-codeship)
 - [Ajout d'un projet](#ajout-dun-projet)
 - [Configuration du CI](#configuration-du-ci)
@@ -107,4 +117,9 @@ src="https://user-images.githubusercontent.com/548778/62837422-83caab80-bc6f-11e
   src="https://user-images.githubusercontent.com/548778/62837453-d6a46300-bc6f-11e9-90a2-4888ef1ee174.png">
 </p>
 
-Voilà, la configuration de votre intégration continue est prête !
+Voilà, la configuration de votre intégration continue de base est prête !
+
+## Ressources :
+
+- [Setting up continuous integration with
+  CodeShip](https://documentation.codeship.com/basic/quickstart/getting-started/#setting-up-continuous-integration-with-codeship)
