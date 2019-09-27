@@ -1,5 +1,9 @@
 # Implémentation basique d'un CI avec Codeship
 
+- [Création du compte Codeship](#création-du-compte-codeship)
+- [Ajout d'un projet](#ajout-dun-projet)
+- [Configuration du CI](#configuration-du-ci)
+
 ## Création du compte Codeship
 
 Allez sur l'url https://app.codeship.com/sessions/new et connectez-vous avec
@@ -52,14 +56,9 @@ Puis, choisissez l'option de base pour le type de projet :
 
 ## Configuration du CI
 
-Dans l'étape suivante, nous allons configurer le CI.
-
 Par défaut, dans l'offre basique de Codeship, le code est lancé sur [une machine
 Ubuntu](https://documentation.codeship.com/general/about/vm-and-infrastructure)
 avec plusieurs langages par défaut installés dessus.
-
-- puis, créer un "pipeline" pour lui indiquer les étapes suivantes de notre
-  intégration continue.
 
 Dans un premier temps, nous allons indiquer à Codeship quelles commandes sont
 nécessaires pour installer les dépendances de notre application. Pour cela, dans
@@ -109,13 +108,3 @@ Puis, cliquez sur `Save and go to dashboard` :
 </p>
 
 Voilà, la configuration de votre intégration continue est prête !
-
-
-
-
-
-
-
-
-
-
