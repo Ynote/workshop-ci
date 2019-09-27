@@ -50,7 +50,7 @@ votre projet pour activer le lancement de Circle CI.
 2. Circle CI utilise un fichier [YAML](https://en.wikipedia.org/wiki/YAML) pour
    identifier la manière dont vous voulez lancer votre environnement de test et
    vos tests eux-mêmes. Le fichier doit se nommer `config.yml` et être rangé
-   dans un dossier `.circleci` à la racine de notre projet. Créez le fichier de
+   dans un dossier `.circleci` à la racine de votre projet. Créez le fichier de
    configuration `.circleci/config.yml` avec les informations suivantes :
 
    ```yml
@@ -63,4 +63,21 @@ votre projet pour activer le lancement de Circle CI.
          - checkout
          - run: echo "Youpi ! On est dans la première étape de l'installation de notre CI :)"
    ```
+   - la clé `jobs` liste les différentes actions que vous voulez lancer sur
+     votre environnement de tests. Par défaut, le job `build` est lancé sur
+     Circle CI.
+   - la clé `docker` définit l'environnement dans lequel vos tests sont
+     exécutés. Il existe plusieurs [environnements
+     possibles](https://circleci.com/docs/2.0/executor-types/).
+     Nous utilisons l'environnement Docker dans ce tutoriel pour sa facilité de
+     configuration :
+     - la clé `image` définit l'utilisation d'un environnement dans lequel
+       Ruby est installé.
+   - la clé `steps` indique chaque étape de votre `job` :
+     - l'étape `checkout` correspond à un raccourci pour indique à Circle CI de
+       récupérer le dernier commit de la branche concernée avec un
+       `git checkout`.
+     - la clé `run` indique à Circle CI de lancer une commande.
+
+
 
