@@ -74,10 +74,49 @@ votre projet pour activer le lancement de Circle CI.
      - la clé `image` définit l'utilisation d'un environnement dans lequel
        Ruby est installé.
    - la clé `steps` indique chaque étape de votre `job` :
-     - l'étape `checkout` correspond à un raccourci pour indique à Circle CI de
-       récupérer le dernier commit de la branche concernée avec un
+     - l'étape `checkout` correspond à un raccourci pour indiquer à Circle CI
+       qu'il faut récupérer le dernier commit de la branche concernée avec un
        `git checkout`.
      - la clé `run` indique à Circle CI de lancer une commande.
 
+3. Ajoutez ce fichier à votre projet et poussez vos modifications :
+
+   ```
+   git add .circleci
+   git commit -m 'Add Circle CI configuration'
+   git push origin add-circle-ci-config
+   ```
+
+4. Sur GitHub, lancez la création d'une pull request avec votre nouvelle
+   branche :
+   <p align="center">
+     <img width="1032" alt="Screenshot 2019-09-27 at 13 59 20"
+   src="https://user-images.githubusercontent.com/548778/65767796-4347c400-e12f-11e9-8987-07f718c8de81.png">
+   </p>
+
+5. Choisissez votre propre dépôt comme base pour la pull request et créez-la :
+   <p align="center">
+     <img width="1058" alt="Screenshot 2019-09-27 at 13 59 49"
+     src="https://user-images.githubusercontent.com/548778/65767866-70947200-e12f-11e9-9ea8-8133c1a99f30.png">
+   </p>
+
+6. Sur votre pull request, cliquez sur `Show all checks` dans la section des
+   actions de la pull request. Vous pouvez voir qu'une vérification est faite
+   avec l'intégration de Circle CI. Cliquez sur `Details` pour voir directement
+   ce qu'il se passe sur Circle CI :
+   <p align="center">
+     <img width="1095" alt="Screenshot 2019-09-27 at 14 04 05"
+     src="https://user-images.githubusercontent.com/548778/65768826-5740f500-e132-11e9-96ec-7523d1d4ccdb.png">
+   </p>
+
+7. Sur l'interface de Circle CI, vous pouvez voir les différentes étapes de
+   votre `job` :
+   <p align="center">
+     <img width="1358" alt="Screenshot 2019-09-27 at 14 09 38"
+     src="https://user-images.githubusercontent.com/548778/65768232-b0a82480-e130-11e9-8d5d-ab82008e6a5f.png">
+   </p>
 
 
+Voilà, la configuration de votre intégration continue est prête ! Vous pouvez
+ajouter davantage d'étapes et d'options en suivant les autres modules proposés
+dans ce dépôt.
