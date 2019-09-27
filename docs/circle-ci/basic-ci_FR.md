@@ -156,10 +156,10 @@ L'environnement de test est prêt. Maintenant, il faut pouvoir lancer les tests 
          - image: circleci/ruby:2.6.3
        steps:
          - checkout
-     -     - run: echo "Youpi ! On est dans la première étape de l'installation de notre CI :)"
-     +     - run:
-     +         name: Install project dependencies
-     +         command: bin/install
+   -      - run: echo "Youpi ! On est dans la première étape de l'installation de notre CI :)"
+   +      - run:
+   +          name: Install project dependencies
+   +          command: bin/install
    ```
 
 
