@@ -4,6 +4,11 @@
 continue avec Circle CI sur un de vos projets. Il vous permettra de créer
 l'environnement nécessaire pour lancer un simple `echo` sur Circle CI.
 
+- [Création du compte](#création-du-compte)
+- [Ajout d'un projet](#ajout-dun-projet)
+- [Configuration du CI](#configuration-du-ci)
+- [Ressources](#ressources)
+
 ## Création du compte
 
 1. Allez sur l'url https://circleci.com/signup/ et connectez-vous avec
