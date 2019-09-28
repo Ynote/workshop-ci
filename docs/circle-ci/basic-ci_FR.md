@@ -1,7 +1,7 @@
-# L'intégration continue avec Circle CI
+# L'intégration continue avec CircleCI
 
 **Objectif** : ce tutoriel présente les premières étapes pour mettre en place
-une intégration continue avec Circle CI sur un de vos projets. Il vous permettra
+une intégration continue avec CircleCI sur un de vos projets. Il vous permettra
 de créer l'environnement nécessaire pour lancer un test ou une suite de tests
 à chaque nouveau commit sur une branche nouvelle ou existante de votre projet.
 
@@ -30,7 +30,7 @@ votre compte GitHub:
      src="https://user-images.githubusercontent.com/548778/65763905-abdd7380-e124-11e9-9179-5fa1aad28fd7.png">
    </p>
 
-2. Dans la fenêtre de permission pour ajouter l'application Circle CI et validez
+2. Dans la fenêtre de permission pour ajouter l'application CircleCI et validez
 l'installation :
 
    <p align="center">
@@ -40,11 +40,11 @@ l'installation :
 
 ## Ajout d'un projet
 
-> Pour permettre à Circle CI de se lancer régulièrement en fonction de
+> Pour permettre à CircleCI de se lancer régulièrement en fonction de
 nouveaux commits sur votre projet, il faut paramétrer une connexion entre
-Circle CI et votre dépôt Git sur GitHub.
+CircleCI et votre dépôt Git sur GitHub.
 
-Par défaut, après votre inscription, Circle CI vous propose d'ajouter un projet.
+Par défaut, après votre inscription, CircleCI vous propose d'ajouter un projet.
 Choisissez votre dépôt Git et cliquez sur `Follow` :
 
 <p align="center">
@@ -65,7 +65,7 @@ build sur la branche `master` est en échec :
 > La première étape pour mettre en place une intégration continue sur un projet,
   c'est de configurer l'environnement dans lequel les tests vont s'exécuter.
   Contrairement à CodeShip où la configuration de l'environnement se fait via
-  une interface web sur le site de CodeShip, la configuration de Circle CI se
+  une interface web sur le site de CodeShip, la configuration de CircleCI se
   fait directement avec un fichier dans votre projet.
 
 1. Créez une nouvelle branche `add-circle-ci-config` :
@@ -74,7 +74,7 @@ build sur la branche `master` est en échec :
    git co -b add-circle-ci-config origin/master
    ```
 
-2. Circle CI utilise un fichier [YAML](https://en.wikipedia.org/wiki/YAML) pour
+2. CircleCI utilise un fichier [YAML](https://en.wikipedia.org/wiki/YAML) pour
    identifier la manière dont vous voulez lancer votre environnement de test et
    vos tests eux-mêmes. Le fichier doit se nommer `config.yml` et être rangé
    dans un dossier `.circleci` à la racine de votre projet. Créez le fichier de
@@ -92,7 +92,7 @@ build sur la branche `master` est en échec :
    ```
    - la clé `jobs` liste les différentes actions que vous voulez lancer sur
      votre environnement de tests. Par défaut, le job `build` est lancé sur
-     Circle CI.
+     CircleCI.
    - la clé `docker` définit l'environnement dans lequel vos tests sont
      exécutés. Il existe plusieurs [environnements
      possibles](https://circleci.com/docs/2.0/executor-types/).
@@ -101,10 +101,10 @@ build sur la branche `master` est en échec :
      - la clé `image` définit l'utilisation d'un environnement dans lequel
        Ruby est installé.
    - la clé `steps` indique chaque étape de votre `job` :
-     - l'étape `checkout` correspond à un raccourci pour indiquer à Circle CI
+     - l'étape `checkout` correspond à un raccourci pour indiquer à CircleCI
        qu'il faut récupérer le dernier commit de la branche concernée avec un
        `git checkout`.
-     - la clé `run` indique à Circle CI de lancer une commande. Nous lançons
+     - la clé `run` indique à CircleCI de lancer une commande. Nous lançons
        pour l'instant un simple `echo`, l'idée étant de lancer dans un second
        temps, les tests de votre projet.
 
@@ -112,7 +112,7 @@ build sur la branche `master` est en échec :
 
    ```
    git add .circleci
-   git commit -m 'Add Circle CI configuration'
+   git commit -m 'Add CircleCI configuration'
    git push origin add-circle-ci-config
    ```
 
@@ -131,14 +131,14 @@ build sur la branche `master` est en échec :
 
 6. Sur votre pull request, cliquez sur `Show all checks` dans la section des
    actions de la pull request. Vous pouvez voir qu'une vérification est faite
-   avec l'intégration de Circle CI. Cliquez sur `Details` pour voir directement
-   ce qu'il se passe sur Circle CI :
+   avec l'intégration de CircleCI. Cliquez sur `Details` pour voir directement
+   ce qu'il se passe sur CircleCI :
    <p align="center">
      <img width="1095" alt="Screenshot 2019-09-27 at 14 04 05"
      src="https://user-images.githubusercontent.com/548778/65768826-5740f500-e132-11e9-96ec-7523d1d4ccdb.png">
    </p>
 
-7. Sur l'interface de Circle CI, vous pouvez voir les différentes étapes de
+7. Sur l'interface de CircleCI, vous pouvez voir les différentes étapes de
    votre `job` :
    <p align="center">
      <img width="1358" alt="Screenshot 2019-09-27 at 14 09 38"
@@ -169,7 +169,7 @@ L'environnement de test est prêt. Maintenant, il faut pouvoir lancer les tests 
    ```
    - la commande `run` peut prendre directement une commande ou un objet
      clé-valeur qui définit la commande et le nom de la commande. Cela permet
-     des étapes nommées dans l'interface de Circle CI :
+     des étapes nommées dans l'interface de CircleCI :
 
      <p align="center">
        <img width="1338" alt="Screenshot 2019-09-27 at 16 49 31"
@@ -199,5 +199,5 @@ dans ce dépôt.
 
 ## Ressources
 
-- [Circle CI getting started
+- [CircleCI getting started
   introduction](https://circleci.com/docs/2.0/getting-started/)

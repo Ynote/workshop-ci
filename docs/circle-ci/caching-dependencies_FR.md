@@ -1,8 +1,8 @@
-# La mise en cache de dépendances sur Circle CI
+# La mise en cache de dépendances sur CircleCI
 
 **Objectif** : ce tutoriel présente comment gérer la mise en cache de données,
 principalement celles issues des dépendances de votre projet, afin de permettre
-un build plus rapide lors du lancement des tests dans Circle CI.
+un build plus rapide lors du lancement des tests dans CircleCI.
 
 **Contexte** : nous continuerons à utiliser l'exemple avec le fichier
 [`hello_world`](https://github.com/Ynote/workshop-ci/blob/master/hello_world.rb)
@@ -12,7 +12,7 @@ projet personnel.
 **Niveau** : intermédiaire.
 
 **Pré-requis** : un projet GitHub avec un fichier de configuration de base pour
-Circle CI.
+CircleCI.
 
 ## Sommaire
 
@@ -21,20 +21,20 @@ Circle CI.
   donné](#enregistrer-des-données-à-mettre-en-cache-pour-un-job-donné)
 - [Récupérer les données mises en cache pour un job
   donné](#récupérer-les-données-mises-en-cache-pour-un-job-donné)
-- [Vérifier l'exécution sur Circle CI](#vérifier-lexécution-sur-circle-ci)
+- [Vérifier l'exécution sur CircleCI](#vérifier-lexécution-sur-circleci)
   - [Quand les dépendances nécessaires n'ont pas encore été mise en cache](#quand-les-dépendances-nécessaires-nont-pas-encore-été-mise-en-cache)
   - [Quand les dépendances nécessaires sont déjà mises en
     cache](#quand-les-dépendances-nécessaires-sont-déjà-mises-en-cache)
-- [Les effets de bord](#les-effets-de-bord)
-  - [Mauvais choix de clé de cache](#mauvais-choix-de-clé-de-cache)
-  - [Mise à jour de votre gestionnaire de dépendances](#mise-à-jour-de-votre-gestionnaire-de-dépendances)
+- [Les points d'attention](#les-points-dattention)
+  - [Le choix de la clé de cache](#le-choix-de-la-clé-de-cache)
+  - [La mise à jour de votre gestionnaire de dépendances](#la-mise-à-jour-de-votre-gestionnaire-de-dépendances)
 - [Ressources](#ressources)
 
 ## Qu'est-ce que la mise en cache ?
 
 La mise en cache de données permet de ne pas télécharger à nouveau des données
 qui ont déjà été téléchargées auparavant. Avant se lancer dans la configuration
-pour Circle CI, il est important de comprendre la notion de "clé de cache". Une
+pour CircleCI, il est important de comprendre la notion de "clé de cache". Une
 clé de cache permet de savoir lorsque des données mise en cache ne sont plus
 valides.
 
@@ -50,7 +50,7 @@ Une bonne clé de cache doit donc être un compromis entre :
 > Pour pouvoir mettre des données en cache, le point le plus important est donc
   de savoir quelle clé de cache utiliser. [Différentes
   stratégies](https://circleci.com/docs/2.0/caching/#using-keys-and-templates)
-  sont possibles avec Circle CI. Nous allons utiliser celle du `checksum`.
+  sont possibles avec CircleCI. Nous allons utiliser celle du `checksum`.
 
 1. Mettez à jour les variables d'environnement nécessaires. Pour Ruby, la
    variable `BUNDLE_PATH` permet d'indiquer au gestionnaire de dépendances
@@ -105,7 +105,7 @@ configuration :
    +          paths:
    +            - vendor/bundle
    ```
-   - la clé `save_cache` indique à Circle CI qu'il faut générer un cache pour
+   - la clé `save_cache` indique à CircleCI qu'il faut générer un cache pour
      certaines données :
      - la clé `key` représente la clé de cache. Le `checksum`  est un hash
        SHA256 encodé en base64 d'un fichier. Dans notre cas, on utilise le
@@ -148,7 +148,7 @@ configuration :
              paths:
                - vendor/bundle
    ```
-   - la clé `restore_cache` indique à Circle CI qu'il faut aller récupérer les
+   - la clé `restore_cache` indique à CircleCI qu'il faut aller récupérer les
      données mise en cache sous la clé de cache `key`. Ces données seront
      rangées dans les mêmes dossiers indiquées dans save_cache.paths`.
 
@@ -164,7 +164,7 @@ configuration :
    Note : pour d'autres languages, informez-vous de la commande à utiliser avec
    votre gestionnaire de dépendances.
 
-## Vérifier l'exécution sur Circle CI
+## Vérifier l'exécution sur CircleCI
 
 ### Quand les dépendances nécessaires n'ont pas encore été mise en cache
 
@@ -220,14 +220,33 @@ configuration :
      src="https://user-images.githubusercontent.com/548778/65786112-368a9680-e156-11e9-990a-300a1bee8246.png">
    </p>
 
-## Les effets de bord
+## Les points d'attention
 
 La mise en cache peut permettre une meilleure performance de votre intégration
 continue. Néanmoins, il faut prendre en compte les effets de bord possibles.
 
-### Mauvais choix de clé de cache
+### Le choix de la clé de cache
 
-### Mise à jour de votre gestionnaire de dépendances
+Comme expliqué précedemment, il existe plusieurs stratégies possibles pour créer
+votre clé de cache. Dans notre tutoriel, nous avons utilisé le `checksum`. Mais
+il est également possible d'utiliser [le nom de la branche courante ou encore le
+numéro de révision du build en
+cours](https://circleci.com/docs/2.0/caching/#using-keys-and-templates).
+
+Il faut être prudent dans l'usage de toutes les stratégies possibles. Si votre
+cache n'expire jamais (sauf au bout du mois par défaut), si vos dépendances
+ne sont pas mises à jour alors qu'elles le devraient, il est fortement possible
+que votre clé de cache ne prenne pas en compte toutes les informations
+nécessaires à son expiration.
+
+Pensez toujours à vérifier que votre clé de cache contient des données relatives
+au contenu mis en cache.
+
+### La mise à jour de votre gestionnaire de dépendances
+
+Lorsque vous mettez à jour votre gestionnaire de dépendances, cela peut impacter
+les dépendances qui sont installées avec. Pensez à associer une donnée
+permettant de versionner votre clé de cache (ex : `v1` ou `bundler-1.17.2`).
 
 ## Ressources
 
