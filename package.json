@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node node-express-example/index.js"
   },
   "repository": {
     "type": "git",
