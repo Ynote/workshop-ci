@@ -5,7 +5,7 @@ principalement celles issues des dépendances de votre projet, afin de permettre
 un build plus rapide lors du lancement des tests dans CircleCI.
 
 **Contexte** : nous continuerons à utiliser l'exemple avec le fichier
-[`hello_world`](https://github.com/Ynote/workshop-ci/blob/master/hello_world.rb)
+[`hello_world.rb`](https://github.com/Ynote/workshop-ci/blob/master/hello_world.rb)
 dans ce tutoriel. Vous pouvez évidemment adapter cela en fonction de votre
 projet personnel.
 
@@ -119,8 +119,8 @@ configuration :
 ## Récupérer les données mises en cache pour un job donné
 
 > Pour que la mise en cache des dépendances ait une utilité, il faut à la fois
-  récupérer les données mise en cache auparavant et permettre de ne pas
-  installer les dépendances si ces dernières existent déjà.
+  récupérer les données mise en cache auparavant et ne pas installer les
+  dépendances si ces dernières existent déjà.
 
 1. Récupérez les données mise en cache avant l'installation de vos dépendances :
 
@@ -150,7 +150,7 @@ configuration :
    ```
    - la clé `restore_cache` indique à CircleCI qu'il faut aller récupérer les
      données mise en cache sous la clé de cache `key`. Ces données seront
-     rangées dans les mêmes dossiers indiquées dans save_cache.paths`.
+     rangées dans les mêmes dossiers indiquées dans `save_cache.paths`.
 
 2. Indiquez au gestionnaire de dépendances Bundler de ne pas installer les
    dépendances si elles existent déjà. Dans `bin/install`, ajoutez la commande

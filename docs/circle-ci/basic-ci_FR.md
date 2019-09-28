@@ -6,7 +6,7 @@ de créer l'environnement nécessaire pour lancer un test ou une suite de tests
 à chaque nouveau commit sur une branche nouvelle ou existante de votre projet.
 
 **Contexte** : nous continuerons à utiliser l'exemple avec le fichier
-[`hello_world`](https://github.com/Ynote/workshop-ci/blob/master/hello_world.rb)
+[`hello_world.rb`](https://github.com/Ynote/workshop-ci/blob/master/hello_world.rb)
 dans ce tutoriel. Vous pouvez évidemment adapter cela en fonction de votre
 projet personnel.
 
