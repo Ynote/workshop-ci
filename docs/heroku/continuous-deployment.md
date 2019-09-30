@@ -147,6 +147,11 @@ applications web. L'un de ses avantages est de fournir une infrastructure rapide
      src="https://user-images.githubusercontent.com/548778/65890994-20721580-e3a4-11e9-8965-cb4e358e4c16.png">
    </p>
 
+Il est possible de créer des buildpacks personnalisés ou d'utilser des
+buildpacks qui ne sont pas issus d'Heroku. Vous pouvez consulter [la
+documentation d'Heroku](https://devcenter.heroku.com/articles/buildpacks) afin
+d'en connaître l'implémentation.
+
 ### Configuration du lancement de votre application
 
 > Maintenant que le gestionnaire de dépendances ainsi que les dépendances
@@ -155,8 +160,9 @@ applications web. L'un de ses avantages est de fournir une infrastructure rapide
   [`Procfile`](https://devcenter.heroku.com/articles/procfile) pour connaître
   les différents process à lancer pour votre application.
 
-1. Un `Procfile` est un simple fichier texte qui liste un ensemble de clé-valeur
-   avec un nom de process et une commande à lancer. Il suit le format suivant :
+1. Un `Procfile` est un simple fichier texte qui liste un ensemble de
+   clé(s)-valeur(s) avec un nom de process et une commande à lancer. Il suit le
+   format suivant :
    ```
    <process type>: <command>
    ```
@@ -167,7 +173,8 @@ applications web. L'un de ses avantages est de fournir une infrastructure rapide
      commande pour lancer un serveur web, il faut l'intégrer dans votre
      `Procfile` sous la clé `web`.
     - `command` : une commande à lancer. Sur Heroku, cela correspond à une
-      commande qui sera lancée au démarrage de la machine (ou __dynos__) qui
+      commande qui sera lancée au démarrage de la machine (ou
+      [dynos](https://www.heroku.com/dynos)) qui
       héberge votre application.
 
 2. À la racine de votre application, ajoutez un fichier `Procfile` avec une
@@ -210,7 +217,7 @@ Votre application est maintenant configurée pour être déployée !
      src="https://user-images.githubusercontent.com/548778/65894223-a93f8000-e3a9-11e9-96a3-e8300eb6bf4b.png">
    </p>
 
-4. Lorsque le déploiement est terminée, vous avez la possibilité de voir
+4. Lorsque le déploiement est terminé, vous avez la possibilité de voir
    directement votre application en production :
    <p align="center">
      <img width="861" alt="Screenshot 2019-09-30 at 17 41 32"
@@ -259,18 +266,14 @@ Votre application est maintenant configurée pour être déployée !
     - Une autre manière de mettre en place un CI est d'utiliser [Heroku
       CI](https://devcenter.heroku.com/articles/heroku-ci). Toutefois, cela
       nécessite d'utiliser leur fonctionnalité de
-      [pipelines](https://devcenter.heroku.com/articles/pipelines).
+      [pipelines](https://devcenter.heroku.com/articles/pipelines). N'hésitez
+      pas à venir nous voir si vous voulez mettre en place les pipelines sur
+      votre projet :)
 
 ## Ressources
 
-
-
-
-
-
-
-
-
-
-
-
+- [Blog post on polyglot platform](https://blog.heroku.com/polyglot_platform)
+- [Heroku Architecture › Buildpacks](https://devcenter.heroku.com/articles/buildpacks)
+- [Heroku Architecture › The Procfile](https://devcenter.heroku.com/articles/procfile)
+- [Continuous Delivery › Pipelines](https://devcenter.heroku.com/articles/pipelines)
+- [Dynos: the heart of the Heroku platform](https://www.heroku.com/dynos)
