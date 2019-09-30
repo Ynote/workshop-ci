@@ -48,8 +48,8 @@ Rails, Python, etc.)
   créer un environnement spécifique pour votre application et le connecter avec
   votre dépôt Git sur GitHub.
 
-1. Cette étape n'est pas nécessaire si vous travaillez sur votre projet
-   personnel et non sur l'exemple fourni. Allez sur
+1. Si vous travaillez sur votre projet personnel et non sur l'exemple fourni,
+   cette étape de fork n'est pas nécessaire. Sinon, allez sur
    https://github.com/Ynote/workshop-express-example et faites un fork de ce
    dépôt Git :
    <p align="center">
@@ -108,8 +108,8 @@ applications web. L'un de ses avantages est de fournir une infrastructure rapide
 à mettre en place pour de nombreux langages de programmation :
 - des outils spécifiques relatifs au langage de programmation choisi
   (gestionnaires de dépendances, console interactive, etc.),
-- une expérience et un configuration similaires de l'environnement quelque soit
-  le langage utilisé.
+- une configuration similaire de l'environnement et du build de votre
+  application quelque soit le langage utilisé.
 
 ### Choix du langage de programmation utilisé
 
@@ -183,7 +183,12 @@ d'en connaître l'implémentation.
    web: npm start
    ```
 
-Votre application est maintenant configurée pour être déployée !
+Votre application est maintenant configurée pour être déployée ! Vous pouvez
+ajouter d'autres process à lancer avec votre `Procfile` si votre application en
+a besoin. Attention, cela nécessite de configurer l'ajout de
+[dynos](https://www.heroku.com/dynos) pour allouer de l'espace machine sur
+lequel ces process doivent se lancer et cela peut changer la tarification de
+votre offre.
 
 ## Livraison continue
 
@@ -265,7 +270,7 @@ Votre application est maintenant configurée pour être déployée !
       - mettre en place le déploiement continu avec ce CI.
     - Une autre manière de mettre en place un CI est d'utiliser [Heroku
       CI](https://devcenter.heroku.com/articles/heroku-ci). Toutefois, cela
-      nécessite d'utiliser leur fonctionnalité de
+      nécessite d'utiliser leur fonctionnalité payante de
       [pipelines](https://devcenter.heroku.com/articles/pipelines). N'hésitez
       pas à venir nous voir si vous voulez mettre en place les pipelines sur
       votre projet :)
