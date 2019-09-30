@@ -17,9 +17,16 @@ Et maintenant, commençons !
 
 Pour pouvoir suivre cet atelier en toute tranquilité, il vous faudra :
 - avoir une connaissance basique de Git,
-- avoir votre propre compte GitHub,
-- à partir de votre compte, créer un fork de [ce présent
-  dépôt](https://github.com/Ynote/workshop-ci).
+- avoir votre propre compte GitHub.
+
+En fonction de votre niveau en développement et de l'environnement qui est
+installé sur votre ordinateur :
+  - si vous savez gérer l'installation d'un nouveau langage sur votre ordinateur,
+    installez Ruby 2.6.3 et créez un fork de [ce présent dépôt](https://github.com/Ynote/workshop-ci),
+  - sinon suivez [ce
+    tutoriel](https://github.com/Ynote/workshop-ci/blob/master/docs/codeanywhere-online-IDE-setup_FR.md)
+    pour utiliser l'IDE Codeanywhere en ligne. Cela vous permettra de suivre les
+    tutoriels de cet atelier directement via une interface web.
 
 ## Déroulement de l'atelier
 
