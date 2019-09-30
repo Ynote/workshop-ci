@@ -21,6 +21,7 @@ ce tutoriel.
 - [Création de votre compte Codeanywhere](#création-de-votre-compte-codeanywhere)
 - [Création de votre espace de travail](#création-de-votre-espace-de-travail)
 - [Installation des dépendances pour l'atelier](#installation-des-dépendances-pour-latelier)
+- [Configuration pour GitHub](#configuration-pour-github)
 - [Retrouver sa console](#retrouver-sa-console)
 
 ## Fork du projet tutoriel
@@ -65,8 +66,8 @@ pour avoir un fork de ce dépôt Git sur votre compte personnel GitHub :
    ```
 
    <p align="center">
-     <img width="822" alt="Screenshot 2019-07-28 at 17 55 38"
-     src="https://user-images.githubusercontent.com/548778/62009874-19404880-b164-11e9-9ca6-bb2c8c1b7335.png">
+     <img width="839" alt="Screenshot 2019-09-30 at 19 04 35"
+     src="https://user-images.githubusercontent.com/548778/65899985-35a37000-e3b5-11e9-8bea-eec6bf9f556b.png">
    </p>
 
    Cela va permettre à Codeanywhere de préparer votre environnement de travail avec
@@ -79,8 +80,8 @@ pour avoir un fork de ce dépôt Git sur votre compte personnel GitHub :
    - Puis, cliquez sur `Create`.
 
    <p align="center">
-     <img width="816" alt="Screenshot 2019-07-28 at 17 56 46"
-     src="https://user-images.githubusercontent.com/548778/62010184-c8caea00-b167-11e9-8ca7-8a1ccc280d94.png">
+     <img width="846" alt="Screenshot 2019-09-30 at 19 06 14"
+     src="https://user-images.githubusercontent.com/548778/65900122-80bd8300-e3b5-11e9-82f1-df0d57689e9b.png">
    </p>
 
 3. Si tout se passe bien, une popup vous notifiant de la création de votre
@@ -111,42 +112,79 @@ pour avoir un fork de ce dépôt Git sur votre compte personnel GitHub :
 
 ## Installation des dépendances pour l'atelier
 
-Lorsque votre container est crée, deux onglets vont automatiquement s'ouvrir.
-Vous pouvez fermer le dernier onglet.
+> Lorsque votre container est crée, deux onglets vont automatiquement s'ouvrir.
+  Vous pouvez fermer le dernier onglet. Dans le premier onglet, vous disposerez
+  d'une console en ligne dans un environnement créé spécifiquement pour notre
+  atelier.
 
-Dans le premier onglet, vous disposerez d'une console en ligne dans un
-environnement créé spécifiquement pour notre atelier.
+1. Installez les dépendances liées à notre projet. Dans votre console, tapez :
 
-### Installation du gestionnaire de dépendances
+   ```sh
+   bin/install
+   ```
 
-Installez les dépendances liées à notre projet. Dans votre console, tapez :
 
-```sh
-bin/install
-```
+2. Les dépendances installées sont principalement liées à la commande `rspec` qui
+   va nous permettre de lancer les tests sur notre projet. Pour tester que ces
+   dépendances ont bien été installées, testez `rspec` en tapant :
 
-### Vérification
+   ```sh
+   bundle exec rspec hello_world_spec.rb
+   ```
 
-Les dépendances installées sont principalement liées à la commande `rspec` qui
-va nous permettre de lancer les tests sur notre projet. Pour tester que ces
-dépendances ont bien été installées, testez `rspec` en tapant :
+   Normalement, la commande devrait vous sortir en output :
 
-```sh
-bundle exec rspec hello_world_spec.rb
-```
+   ```sh
+   1 example, 0 failures
+   ```
 
-Normalement, la commande devrait vous sortir en output :
+   Voici un screenshot des commandes ci-dessous et leur output :
 
-```sh
-1 example, 0 failures
-```
+   <p align="center">
+     <img width="1440" alt="Screenshot 2019-07-28 at 17 59 43"
+   src="https://user-images.githubusercontent.com/548778/62010203-fb74e280-b167-11e9-8f9b-4d42e4eae12b.png">
+   </p>
 
-Voici un screenshot des commandes ci-dessous et leur output :
+### Configuration pour GitHub
 
-<p align="center">
-  <img width="1440" alt="Screenshot 2019-07-28 at 17 59 43"
-src="https://user-images.githubusercontent.com/548778/62010203-fb74e280-b167-11e9-8f9b-4d42e4eae12b.png">
-</p>
+1. Par défaut, Codeanywhere utilise un clone `https` pour votre dépôt. Cela
+   n'est pas pratique car pour chaque commande Git, un authentification vous
+   sera demandée. Remplacez donc le serveur distant de votre dépôt par une
+   authentification SSH :
+   ```sh
+   # Suppression du serveur distant
+   git remote remove origin
+
+   # Ajout du serveur distant SSH
+   git remote add origin git@github.com:VOTRE-NOM-UTILISATEUR/workshop-ci.git
+
+   # Vérification du serveur distant
+   git remote -v
+   ```
+   <p align="center">
+     <img width="447" alt="Screenshot 2019-09-30 at 19 28 20"
+     src="https://user-images.githubusercontent.com/548778/65901425-7c469980-e3b8-11e9-953d-dfb128161ded.png">
+   </p>
+
+2. Récupérez la clé SSH de votre serveur Codeanywhere et copiez-la quelque part
+   :
+   ```sh
+   cat ~/.ssh/id_rsa.pub
+   ```
+
+3. Ajoutez cette clé SSH dans GitHub. Allez sur https://github.com/settings/keys
+   et cliquez sur `New SSH key` :
+   <p align="center">
+     <img width="1015" alt="Screenshot 2019-09-30 at 19 29 30"
+     src="https://user-images.githubusercontent.com/548778/65901718-0d1d7500-e3b9-11e9-86fd-a8fb9f96b15e.png">
+   </p>
+
+4. Donnez un nom à cette clé et collez la clé préalablement copiée dans le champ
+   `key` :
+   <p align="center">
+     <img width="1015" alt="Screenshot 2019-09-30 at 19 32 17"
+     src="https://user-images.githubusercontent.com/548778/65901868-5c63a580-e3b9-11e9-8e32-00824bfcf908.png">
+   </p>
 
 Voilà ! Votre environnement de développement est prêt !
 
