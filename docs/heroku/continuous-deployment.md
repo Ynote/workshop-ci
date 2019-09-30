@@ -14,6 +14,14 @@ Rails, Python, etc.)
 
 ## Sommaire
 
+- [Création du compte](#création-du-compte)
+- [Ajout d'une application](#ajout-dune-application)
+- [Le fonctionnement basique d'Heroku](#le-fonctionnement-basique-dheroku)
+  - [Choix du langage de programmation utilisé](#choix-du-langage-de-programmation-utilisé)
+  - [Configuration du lancement de votre application](#configuration-du-lancement-de-votre-application)
+- [Livraison continue](#livraison-continue)
+- [Déploiement continu](#déploiement-continu)
+
 ## Création du compte
 
 1. Allez sur l'url https://signup.heroku.com/ et remplissez le formulaire de
@@ -93,7 +101,7 @@ se mettre en place.
 
 ## Le fonctionnement basique d'Heroku
 
-> Heroku est une [plateforme
+Heroku est une [plateforme
 __polyglotte__](https://blog.heroku.com/polyglot_platform) qui permet aux
 développeurs et développeuses de construire et déployer facilement des
 applications web. L'un de ses avantages est de fournir une infrastructure rapide
@@ -141,10 +149,11 @@ applications web. L'un de ses avantages est de fournir une infrastructure rapide
 
 ### Configuration du lancement de votre application
 
-> Maintenant que le gestionnaire de dépendances ainsi que les dépendances de
+> Maintenant que le gestionnaire de dépendances ainsi que les dépendances
   sont installées, il faut indiquer à l'outil comment lancer votre application
-  elle-même. Heroku se base sur un [Procfile] pour connaître les différents
-  process à lancer pour votre application.
+  elle-même. Heroku se base sur un
+  [`Procfile`](https://devcenter.heroku.com/articles/procfile) pour connaître
+  les différents process à lancer pour votre application.
 
 1. Un `Procfile` est un simple fichier texte qui liste un ensemble de clé-valeur
    avec un nom de process et une commande à lancer. Il suit le format suivant :
