@@ -21,6 +21,7 @@ Rails, Python, etc.)
   - [Configuration du lancement de votre application](#configuration-du-lancement-de-votre-application)
 - [Livraison continue](#livraison-continue)
 - [Déploiement continu](#déploiement-continu)
+- [Ressources](#ressources)
 
 ## Création du compte
 
