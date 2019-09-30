@@ -49,7 +49,10 @@ Nous vous proposons de creuser vous-même les problématiques qui vous
 intéressent. Plusieurs tutoriels sont à votre disposition en fonction de votre
 envie :
 
-#### Circle CI
-- [Mise en place d'un CI basique](https://github.com/Ynote/workshop-ci/blob/master/docs/circle-ci/basic-ci_FR.md)
-- [Mis en cache des
-  dépendances](https://github.com/Ynote/workshop-ci/blob/master/docs/circle-ci/caching-dependencies_FR.md)
+#### L'intégration continue sur un POC ou une petite application avec Heroku
+- [Comprendre le déploiement continu avec
+  Heroku](https://github.com/Ynote/workshop-ci/blob/master/docs/heroku/continuous-deployment.md)
+
+#### L'intégration continue sur une application de taille moyenne avec Circle CI
+- [Mettre en place un CI basique](https://github.com/Ynote/workshop-ci/blob/master/docs/circle-ci/basic-ci_FR.md)
+- [Mettre en cache les dépendances pour une meilleure performance](https://github.com/Ynote/workshop-ci/blob/master/docs/circle-ci/caching-dependencies_FR.md)
