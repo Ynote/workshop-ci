@@ -56,3 +56,5 @@ envie :
 #### L'intégration continue sur une application de taille moyenne avec Circle CI
 - [Mettre en place un CI basique](https://github.com/Ynote/workshop-ci/blob/master/docs/circle-ci/basic-ci_FR.md)
 - [Mettre en cache les dépendances pour une meilleure performance](https://github.com/Ynote/workshop-ci/blob/master/docs/circle-ci/caching-dependencies_FR.md)
+- [Blog post - Faire des revues de code automatique avec Pronto et
+  CircleCI](https://lafabrique.kisskissbankbank.com/faire-des-revues-automatiques-de-code-avec-pronto-et-circleci-76f1f7928dfc)
