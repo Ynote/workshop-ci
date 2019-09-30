@@ -3,11 +3,19 @@
 [Codeanywhere](https://codeanywhere.com) est un environnement de développement
 intégré (IDE) en ligne.
 
-Dans le cadre de l'atelier, il va nous permettre de mettre en place un
-environnement de développement rapidement et de pouvoir suivre pas à pas les
-étapes de la création d'un projet en déploiement continu.
+**Objectif** : dans le cadre de l'atelier, Codeanywhere va vous permettre de
+mettre en place un environnement de développement rapidement et de pouvoir
+suivre pas à pas les étapes de la création d'un projet en déploiement continu.
 
-#### Sommaire :
+**Contexte** : Si vous êtes à l'aise avec l'installation de langages et la
+configuration de votre ordinateur, il n'est pas nécessaire pour vous de suivre
+ce tutoriel.
+
+**Niveau** : débutant.
+
+**Pré-requis** : un compte GitHub.
+
+## Sommaire
 
 - [Fork du projet tutoriel](#fork-du-projet-tutoriel)
 - [Création de votre compte Codeanywhere](#création-de-votre-compte-codeanywhere)
@@ -17,86 +25,89 @@ environnement de développement rapidement et de pouvoir suivre pas à pas les
 
 ## Fork du projet tutoriel
 
-Allez sur https://github.com/Ynote/workshop-circle-ci_ruby-setup-example et
-cliquez sur le bouton `fork` pour avoir un fork de ce dépôt Git sur votre compte
-personnel GitHub.
+Allez sur https://github.com/Ynote/workshop-ci et cliquez sur le bouton `fork`
+pour avoir un fork de ce dépôt Git sur votre compte personnel GitHub :
+
+<p align="center">
+  <img width="1045" alt="Screenshot 2019-09-30 at 18 51 39"
+  src="https://user-images.githubusercontent.com/548778/65899324-c7aa7900-e3b3-11e9-9e22-a220db0fd5c2.png">
+</p>
 
 ## Création de votre compte Codeanywhere
 
-Allez sur l'url https://codeanywhere.com/login et connectez-vous avec votre
-compte GitHub :
+1. Allez sur l'url https://codeanywhere.com/login et connectez-vous avec votre
+   compte GitHub :
 
-<p align="center">
-  <img width="725" alt="Screenshot 2019-07-28 at 18 15 31"
-src="https://user-images.githubusercontent.com/548778/62009867-1180a400-b164-11e9-927e-dc33e0c1ea7f.png">
-</p>
+   <p align="center">
+     <img width="725" alt="Screenshot 2019-07-28 at 18 15 31"
+   src="https://user-images.githubusercontent.com/548778/62009867-1180a400-b164-11e9-927e-dc33e0c1ea7f.png">
+   </p>
 
-Donnez l'autorisation à Codeanywhere d'accéder à vos données GitHub nécessaires
-pour pouvoir utiliser l'outil :
+2. Donnez l'autorisation à Codeanywhere d'accéder à vos données GitHub nécessaires
+   pour pouvoir utiliser l'outil :
 
-<p align="center">
-  <img width="1552" alt="Screenshot 2019-07-28 at 17 54 54"
-  src="https://user-images.githubusercontent.com/548778/62009872-15142b00-b164-11e9-8811-2b55089fc716.png">
-</p>
+   <p align="center">
+     <img width="1552" alt="Screenshot 2019-07-28 at 17 54 54"
+     src="https://user-images.githubusercontent.com/548778/62009872-15142b00-b164-11e9-8811-2b55089fc716.png">
+   </p>
 
-Vérifiez vos emails pour retrouver l'email envoyé par Codeanywhere et validez
-votre compte.
+3. Vérifiez vos emails pour retrouver l'email envoyé par Codeanywhere et validez
+   votre compte.
 
 ## Création de votre espace de travail
 
-Lorsque vous êtes connecté·e, une popup s'ouvre pour vous permettre de créer
-votre premier espace de travail. La popup se nomme `Connection wizard`.
+1. Lorsque vous êtes connecté·e, une popup s'ouvre pour vous permettre de créer
+   votre premier espace de travail. La popup se nomme `Connection wizard`.
+   Cliquez sur `Git from URL` et tapez l'url suivante dans le champ :
 
-Cliquez sur `Git from URL` et tapez l'url suivante dans le champ :
-```
-https://github.com/VOTRE-NOM-UTILISATEUR/workshop-circle-ci_ruby-setup-example
-```
+   ```
+   https://github.com/VOTRE-NOM-UTILISATEUR/workshop-ci
+   ```
 
-<p align="center">
-  <img width="822" alt="Screenshot 2019-07-28 at 17 55 38"
-  src="https://user-images.githubusercontent.com/548778/62009874-19404880-b164-11e9-9ca6-bb2c8c1b7335.png">
-</p>
+   <p align="center">
+     <img width="822" alt="Screenshot 2019-07-28 at 17 55 38"
+     src="https://user-images.githubusercontent.com/548778/62009874-19404880-b164-11e9-9ca6-bb2c8c1b7335.png">
+   </p>
 
-Cela va permettre à Codeanywhere de préparer votre environnement de travail avec
-le dépôt Git `workshop-circle-ci_ruby-setup-example` de votre propre compte
-GitHub.
+   Cela va permettre à Codeanywhere de préparer votre environnement de travail avec
+   le dépôt Git `workshop-ci` de votre propre compte GitHub.
 
-Sur l'étape suivante :
-- Tapez le nom du projet : `Workshop-Circle-CI`,
-- Recherchez un container `ruby`,
-- Choisissez le container Ruby pour `Ubuntu 16.04`,
-- Puis, cliquez sur `Create`.
+2. Sur l'étape suivante :
+   - Tapez le nom du projet : `Workshop-CI`,
+   - Recherchez un container `ruby`,
+   - Choisissez le container Ruby pour `Ubuntu 16.04`,
+   - Puis, cliquez sur `Create`.
 
-<p align="center">
-  <img width="816" alt="Screenshot 2019-07-28 at 17 56 46"
-  src="https://user-images.githubusercontent.com/548778/62010184-c8caea00-b167-11e9-8ca7-8a1ccc280d94.png">
-</p>
+   <p align="center">
+     <img width="816" alt="Screenshot 2019-07-28 at 17 56 46"
+     src="https://user-images.githubusercontent.com/548778/62010184-c8caea00-b167-11e9-8ca7-8a1ccc280d94.png">
+   </p>
 
-Si tout se passe bien, une popup vous notifiant de la création de votre
-container devrait s'afficher :
+3. Si tout se passe bien, une popup vous notifiant de la création de votre
+   container devrait s'afficher :
 
-<p align="center">
-  <img width="650" alt="Screenshot 2019-07-28 at 17 57 36"
-  src="https://user-images.githubusercontent.com/548778/62010080-59082f80-b166-11e9-8bee-ab8fcaf2961d.png">
-</p>
+   <p align="center">
+     <img width="650" alt="Screenshot 2019-07-28 at 17 57 36"
+     src="https://user-images.githubusercontent.com/548778/62010080-59082f80-b166-11e9-8bee-ab8fcaf2961d.png">
+   </p>
 
-Dans certains cas une popup d'erreur peut s'afficher :
+4. Dans certains cas une popup d'erreur peut s'afficher :
 
-<p align="center">
-  <img width="815" alt="Screenshot 2019-07-28 at 17 57 03"
-  src="https://user-images.githubusercontent.com/548778/62010077-54437b80-b166-11e9-9ae8-ffe9a11f94e3.png">
-</p>
+   <p align="center">
+     <img width="815" alt="Screenshot 2019-07-28 at 17 57 03"
+     src="https://user-images.githubusercontent.com/548778/62010077-54437b80-b166-11e9-9ae8-ffe9a11f94e3.png">
+   </p>
 
-Si vous êtes dans ce cas, c'est que vous n'avez pas pris le temps de valider
-votre compte. Dans ce cas, retournez dans vos emails, validez votre compte et
-[recommencez les étapes](#création-de-votre-espace-de-travail). Pour retourner
-sur la popup de création de container, allez dans
-`File > New connection > Git from URL` :
+   Si vous êtes dans ce cas, c'est que vous n'avez pas pris le temps de valider
+   votre compte. Dans ce cas, retournez dans vos emails, validez votre compte et
+   [recommencez les étapes](#création-de-votre-espace-de-travail). Pour retourner
+   sur la popup de création de container, allez dans
+   `File > New connection > Git from URL` :
 
-<p align="center">
-  <img width="553" alt="Screenshot 2019-07-28 at 18 40 37"
-  src="https://user-images.githubusercontent.com/548778/62010160-7093e800-b167-11e9-9f7b-7643864f58f0.png">
-</p>
+   <p align="center">
+     <img width="553" alt="Screenshot 2019-07-28 at 18 40 37"
+     src="https://user-images.githubusercontent.com/548778/62010160-7093e800-b167-11e9-9f7b-7643864f58f0.png">
+   </p>
 
 ## Installation des dépendances pour l'atelier
 
@@ -108,8 +119,7 @@ environnement créé spécifiquement pour notre atelier.
 
 ### Installation du gestionnaire de dépendances
 
-Nous allons installer les dépendances liées à notre projet. Dans votre console,
-tapez :
+Installez les dépendances liées à notre projet. Dans votre console, tapez :
 
 ```sh
 bin/install
