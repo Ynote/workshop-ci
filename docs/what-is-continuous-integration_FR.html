@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Atelier-integration-continue</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body {
+        font-family: 'Droid Serif';
+      }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code {
+        font-family: 'Ubuntu Mono';
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">class: middle, center
+
+# Atelier sur l'intégration continue
+## Déployez les yeux fermés !
+
+
+.footnote[@ynote_hk / KissKissBankBank]
+.footnote[@sunfox / KissKissBankBank]
+---
+class: middle, center
+
+# Qu'est-ce que l'intégration continue ?
+
+---
+class: middle, center
+
+## Une bonne pratique :
+### merger régulièrement en toute sécurité sur une base de code partagée
+
+---
+class: middle, center
+
+## Avantages :
+### - Moins de bugs en production
+### - Un déploiement plus facile
+### - Une feedback loop plus courte
+### - Davantage de temps de développement
+
+???
+
+- Moins de bugs en production grâce à une suite de tests solide
+- Un déploiement plus facile puisque les conflits sont résolus au fur et à mesure
+- Un meilleur focus des développeurs et développeuses car l’échec d’un test est immédiatement connu à chaque nouveau commit
+- Le temps de test est déléguée à un système automatique au lieu d’être effectué en local
+
+---
+class: middle, center
+
+## Coûts :
+### - Un serveur distant spécifique au CI
+### - Un build déterministe de votre application
+### - Une suite de tests solides
+
+---
+class: middle, center
+
+# Et la livraison continue ?
+
+---
+class: middle, center
+
+## Une seule action :
+### délivrer une fonctionnalité ou un bugfix avec une unique action humaine
+
+---
+class: middle, center
+
+## Avantages
+### - On peut déployer plus souvent.
+### - Il n’y a plus un temps dédié au déploiement &lt;br /&gt;(communication, gestion de conflit, etc.)
+
+???
+
+- Il n'y a plus de &quot;tunnels de développement&quot;
+- On peut déployer de plus petites améliorations, ce qui permet d’itérer au lieu de rentrer dans des “tunnels de développement&quot;
+
+---
+class: middle, center
+
+## Coûts :
+### - Idem que pour l'intégration continue
+### - Un script de déploiement à lancer manuellement
+### - La nécessité de pouvoir faire du feature switching
+
+???
+
+- Un script de déploiement à lancer manuellement. Ce script doit prendre en compte toutes les étapes d’un déploiement (installation des dépendances, build des assets, build de l’application, configuration de prod, lancement de l’application, mise à jour sur le serveur, etc.)
+- La nécessité d’ajouter du feature switching pour ne pas affecter les utilisateurs sur les nouvelles fonctionnalités qui ne sont pas encore tout à fait prêtes.
+
+---
+
+class: middle, center
+
+# Enfin, le Graal, le déploiement continu !
+
+---
+class: middle, center
+
+## Étape ultime de l’automatisation :
+### Plus d’intervention humaine. Seul l’échec d’un test ou d’une étape de l’intégration continue peut empêcher le déploiement.
+
+---
+class: middle, center
+
+## Avantages
+### - Plus de pression sur un jour (ou temps dédié) de release
+### - Retour des utilisateurs plus rapide
+### - Déploiements sont moins risqués
+### - Retour des utilisateurs plus rapide
+
+???
+
+- Les déploiements sont moins risqués et plus facile à réparer en cas de bug
+- La qualité du produit augmente progressivement et est visible pour les utilisateurs de manière fluide.
+
+---
+class: middle, center
+
+## Coûts :
+### - Idem que pour la livraison continue
+### - Un script de déploiement lié au succès du CI
+### - Un besoin de documentation sur les procédures de déploiement
+### - Une communication avec les autres pôles
+
+---
+class: middle, center
+
+# Voilà ! et si on mettait les mains dedans maintenant ? </textarea>
+
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
+
