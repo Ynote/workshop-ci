@@ -58,7 +58,7 @@ envie :
 
 #### L'intégration continue sur une petite application avec Heroku
 - [Comprendre le déploiement continu avec
-  Heroku](https://github.com/Ynote/workshop-ci/blob/master/docs/heroku/continuous-deployment.md)
+  Heroku](https://github.com/Ynote/workshop-ci/blob/master/docs/heroku/continuous-deployment_FR.md)
 
 #### L'intégration continue sur une application de taille moyenne avec Circle CI
 - [Mettre en place un CI basique](https://github.com/Ynote/workshop-ci/blob/master/docs/circle-ci/basic-ci_FR.md)
@@ -66,7 +66,7 @@ envie :
 
 #### La revue de code automatique
 - [L'automatisation de vos conventions d'écriture avec Danger et
-  CodeShip](https://github.com/Ynote/workshop-ci/blob/master/docs/codeship/automated-pull-request-convention-review.md)
+  CodeShip](https://github.com/Ynote/workshop-ci/blob/master/docs/codeship/automated-pull-request-convention-review_FR.md)
 
 ## Ressources
 - [Blog post - Faire des revues de code automatique avec Pronto et
