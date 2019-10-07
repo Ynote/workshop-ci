@@ -28,16 +28,7 @@ installé sur votre ordinateur :
     pour utiliser l'IDE Codeanywhere en ligne. Cela vous permettra de suivre les
     tutoriels de cet atelier directement via une interface web.
 
-## Déroulement de l'atelier
-
-### 1. Brève (très brève) partie théorique
-
-Nous allons expliquer les concepts de :
-- intégration continue,
-- livraison continue,
-- déploiement continu.
-
-### 2. Mise en place d'une intégration continue très basique
+## Exercice commun
 
 Nous vous proposons de mettre en place tous ensemble une intégration continue sur
 ce présent projet avec [Codeship](https://codeship.com/). Le projet de ce dépôt
@@ -50,21 +41,21 @@ contient :
 Il n'est pas nécessaire de connaître le langage Ruby pour pouvoir suivre ce
 tutoriel. [Lançons-nous !](/docs/codeship/basic-ci_FR.md)
 
-### 3. Aller plus loin selon vos envies
+## Aller plus loin selon vos envies
 
 Nous vous proposons de creuser vous-même les problématiques qui vous
 intéressent. Plusieurs tutoriels sont à votre disposition en fonction de votre
 envie :
 
-#### L'intégration continue sur une petite application avec Heroku
+### L'intégration continue sur une petite application avec Heroku
 - [Comprendre le déploiement continu avec
   Heroku](https://github.com/Ynote/workshop-ci/blob/master/docs/heroku/continuous-deployment_FR.md)
 
-#### L'intégration continue sur une application de taille moyenne avec Circle CI
+### L'intégration continue sur une application de taille moyenne avec Circle CI
 - [Mettre en place un CI basique](https://github.com/Ynote/workshop-ci/blob/master/docs/circle-ci/basic-ci_FR.md)
 - [Mettre en cache les dépendances pour une meilleure performance](https://github.com/Ynote/workshop-ci/blob/master/docs/circle-ci/caching-dependencies_FR.md)
 
-#### La revue de code automatique
+### La revue de code automatique
 - [L'automatisation de vos conventions d'écriture avec Danger et
   CodeShip](https://github.com/Ynote/workshop-ci/blob/master/docs/codeship/automated-pull-request-convention-review_FR.md)
 
