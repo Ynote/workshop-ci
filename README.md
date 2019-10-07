@@ -56,12 +56,18 @@ Nous vous proposons de creuser vous-même les problématiques qui vous
 intéressent. Plusieurs tutoriels sont à votre disposition en fonction de votre
 envie :
 
-#### L'intégration continue sur un POC ou une petite application avec Heroku
+#### L'intégration continue sur une petite application avec Heroku
 - [Comprendre le déploiement continu avec
   Heroku](https://github.com/Ynote/workshop-ci/blob/master/docs/heroku/continuous-deployment.md)
 
 #### L'intégration continue sur une application de taille moyenne avec Circle CI
 - [Mettre en place un CI basique](https://github.com/Ynote/workshop-ci/blob/master/docs/circle-ci/basic-ci_FR.md)
 - [Mettre en cache les dépendances pour une meilleure performance](https://github.com/Ynote/workshop-ci/blob/master/docs/circle-ci/caching-dependencies_FR.md)
+
+#### La revue de code automatique
+- [L'automatisation de vos conventions d'écriture avec Danger et
+  CodeShip](https://github.com/Ynote/workshop-ci/blob/master/docs/codeship/automated-pull-request-convention-review.md)
+
+## Ressources
 - [Blog post - Faire des revues de code automatique avec Pronto et
   CircleCI](https://lafabrique.kisskissbankbank.com/faire-des-revues-automatiques-de-code-avec-pronto-et-circleci-76f1f7928dfc)
