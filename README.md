@@ -71,3 +71,5 @@ envie :
 ## Ressources
 - [Blog post - Faire des revues de code automatique avec Pronto et
   CircleCI](https://lafabrique.kisskissbankbank.com/faire-des-revues-automatiques-de-code-avec-pronto-et-circleci-76f1f7928dfc)
+- [How to get to continuous integration by
+  Atlassian](https://www.atlassian.com/fr/continuous-delivery/continuous-integration/how-to-get-to-continuous-integration)
