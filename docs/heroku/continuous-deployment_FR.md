@@ -4,7 +4,7 @@
 sur un de vos projets avec Heroku.
 
 **Contexte** : nous allons utiliser un exemple d'application en Node.js servie
-avec Express. Vous pouvez évidemment adapter cela en fonction de votre projet
+avec Express. Vous pouvez également adapter cela en fonction de votre projet
 personnel.
 
 **Niveau** : intermédiaire.
@@ -68,7 +68,7 @@ Rails, Python, etc.)
 3. Indiquez le nom que vous souhaitez pour votre application, ainsi que la
    région du monde dans laquelle vous voulez déployer votre application. Passez
    l'option `Add to pipeline…` (cette option est payante, n'hésitez pas à nous
-   demander davantage information dessus si vous le souhaitez) :
+   demander davantage d'information si vous le souhaitez) :
    <p align="center">
      <img width="807" alt="Screenshot 2019-09-28 at 17 18 22"
      src="https://user-images.githubusercontent.com/548778/65818699-56808f80-e214-11e9-856d-44ca7305ee19.png">
@@ -88,7 +88,7 @@ Rails, Python, etc.)
    </p>
 
 6. Votre application Heroku est maintenant liée à votre compte GitHub. Il faut
-   maintenant lui indiquer quel dépôt suivre. Indiquez le nom du dépôt
+   désormais lui indiquer quel dépôt suivre. Indiquez le nom du dépôt
    (ex : `workshop-express-example`) et cliquez sur `Search`. Puis, cliquez sur
    `Connect` :
    <p align="center">
@@ -96,8 +96,8 @@ Rails, Python, etc.)
      src="https://user-images.githubusercontent.com/548778/65819122-45864d00-e219-11e9-88d8-1cbcfbcbc732.png">
    </p>
 
-Voilà, votre application est maintenant prête ! Nous allons maintenant aborder
-le fonctionnement d'Heroku pour comprendre comment le déploiement continu peut
+Voilà, votre application est prête ! Nous allons maintenant aborder le
+fonctionnement d'Heroku pour comprendre comment le déploiement continu peut
 se mettre en place.
 
 ## Le fonctionnement basique d'Heroku
@@ -120,8 +120,7 @@ applications web. L'un de ses avantages est de fournir une infrastructure rapide
   sont nécessaire pour configurer correctement l'environnement de votre
   application.
 
-1. Pour choisir le buildpack de votre application, allez dans les `Settings` de
-   votre application :
+1. Pour choisir le buildpack de votre application, allez dans `Settings` :
    <p align="center">
      <img width="1256" alt="Screenshot 2019-09-30 at 16 56 35"
      src="https://user-images.githubusercontent.com/548778/65890658-83af7800-e3a3-11e9-9531-dbf4b5811252.png">
@@ -148,7 +147,7 @@ applications web. L'un de ses avantages est de fournir une infrastructure rapide
      src="https://user-images.githubusercontent.com/548778/65890994-20721580-e3a4-11e9-8965-cb4e358e4c16.png">
    </p>
 
-Il est possible de créer des buildpacks personnalisés ou d'utilser des
+Il est possible de créer des buildpacks personnalisés ou d'utiliser des
 buildpacks qui ne sont pas issus d'Heroku. Vous pouvez consulter [la
 documentation d'Heroku](https://devcenter.heroku.com/articles/buildpacks) afin
 d'en connaître l'implémentation.
@@ -175,7 +174,7 @@ d'en connaître l'implémentation.
      `Procfile` sous la clé `web`.
     - `command` : une commande à lancer. Sur Heroku, cela correspond à une
       commande qui sera lancée au démarrage de la machine (ou
-      [dynos](https://www.heroku.com/dynos)) qui
+      [dyno](https://www.heroku.com/dynos)) qui
       héberge votre application.
 
 2. À la racine de votre application, ajoutez un fichier `Procfile` avec une
@@ -186,10 +185,10 @@ d'en connaître l'implémentation.
 
 Votre application est maintenant configurée pour être déployée ! Vous pouvez
 ajouter d'autres process à lancer avec votre `Procfile` si votre application en
-a besoin. Attention, cela nécessite de configurer l'ajout de
-[dynos](https://www.heroku.com/dynos) pour allouer de l'espace machine sur
-lequel ces process doivent se lancer et cela peut changer la tarification de
-votre offre.
+a besoin (par exemple, des tâches de fond). Attention, cela nécessite de
+configurer l'ajout de [dynos](https://www.heroku.com/dynos) pour allouer de
+l'espace machine sur lequel ces process doivent se lancer et cela peut changer
+la tarification de votre offre.
 
 ## Livraison continue
 
@@ -224,7 +223,8 @@ votre offre.
    </p>
 
 4. Lorsque le déploiement est terminé, vous avez la possibilité de voir
-   directement votre application en production :
+   directement votre application en production en cliquant sur le bouton
+   `View` :
    <p align="center">
      <img width="861" alt="Screenshot 2019-09-30 at 17 41 32"
      src="https://user-images.githubusercontent.com/548778/65894338-e441b380-e3a9-11e9-91de-12118860d298.png">
@@ -252,7 +252,7 @@ votre offre.
    </p>
 
 3. Si vous avez mis en place un autre outil de CI qui écoute votre dépôt Git,
-   vous pouvez également indique à Heroku d'attendre que le CI passe avant de
+   vous pouvez également indiquer à Heroku d'attendre que le CI passe avant de
    déployer votre application :
    <p align="center">
      <img width="1267" alt="Screenshot 2019-09-30 at 17 49 22"
