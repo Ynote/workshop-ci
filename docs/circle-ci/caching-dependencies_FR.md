@@ -9,7 +9,7 @@ un build plus rapide lors du lancement des tests dans CircleCI.
 dans ce tutoriel. Vous pouvez également adapter cela en fonction de votre
 projet personnel.
 
-**Niveau** : intermédiaire.
+**Niveau** : avancé.
 
 **Pré-requis** : un projet GitHub avec un fichier de configuration de base pour
 CircleCI, comme sur
