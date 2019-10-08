@@ -4,7 +4,7 @@
 personnelles d'écriture que vous souhaitez mettre en place sur votre projet :
 - celles de code : _"Je veux des tests pour chaque fichier de l'application"_,
 - celles de format : _"Une pull request ne doit pas être trop longue"_,
-- celles process : _"Une pull request doit toujours comporter une description_.
+- celles de process : _"Une pull request doit toujours comporter une description_.
 
 Cette automatisation permet de déplacer la charge de certains commentaires
 récurrents lors des revues sur un script qui se lance à chaque nouveau commit
@@ -12,12 +12,12 @@ sur une branche.
 
 **Contexte** : nous allons utiliser un exemple d'application en Node.js servie
 avec Express, ainsi que le module [Danger](https://danger.systems/) pour gérer
-l'automatisation de vos conventions d'écriture. Vous pouvez évidemment adapter
-cela en fonction de votre projet personnel.
+l'automatisation de vos conventions d'écriture. À la place de l'application
+d'exemple vous pouvez utiliser un projet personnel en Node.js.
 
 **Niveau** : intermédiaire.
 
-**Pré-requis** : un projet GitHub avec des tests.
+**Pré-requis** : un projet Node.js sur GitHub avec des tests.
 
 ## Sommaire
 
@@ -107,12 +107,14 @@ cela en fonction de votre projet personnel.
    ```sh
    npm add --save-dev --save-exact danger
    ```
-   _Pensez toujours à ajouter vos dépendances avec une version fixe pour avoir
-   un build déterministe, c'est-à-dire avoir exactement le même build sur votre
-   environnement local et celui de votre intégration continue._
+   _L'argument `--save-exact` permets d'avoir une version fixe dans le
+   `package.json`. Cela vous assure un build plus déterministe, qui sera
+   exactement le même build sur votre environnement local et celui de
+   votre intégration continue._
 
-3. Créez un fichier `dangerfile.js` et ajoutez-lui la règle suivante qui
-   consiste à afficher la liste des fichiers modifiés pour chaque pull request :
+3. Créez un fichier `dangerfile.js` à la racine de votre projet et ajoutez-lui
+   la règle suivante qui consiste à écrire un commentaire sur votre pull request
+   avec la liste des fichiers modifiés :
    ```js
    import { danger, markdown } from 'danger'
 
@@ -128,8 +130,8 @@ cela en fonction de votre projet personnel.
      concernant votre branche Git en cours. D'autres objets sont disponibles et
      expliqués dans la [documentation de
      Danger](https://danger.systems/js/reference.html#the-danger-dsl-root-objects).
-   - la fonction `message` est fournie directement par Danger et permet de
-     poster des retours sur les pull requests.
+   - la fonction `markdown` est fournie directement par Danger et permet de
+     poster des commentaires au format Markdown sur les pull requests.
 
 4. Pour appliquer les règles que vous avez établies dans votre `dangerfile.js`,
    vous devez permettre à votre intégration continue de les lancer. Pour cela,
@@ -157,8 +159,7 @@ cela en fonction de votre projet personnel.
      }
    }
    ```
-   - Ce script se lance avec la commande `npm run [NOM DE VOTRE SCRIPT]`. Ici,
-     on peut le lancer avec `npm run danger`.
+   - Ce script peut désormais se lancer avec `npm run danger`.
    - En local, cette commande est inutile car l'usage de Danger est uniquement
      restreint aux pull requests.
 
@@ -166,7 +167,7 @@ cela en fonction de votre projet personnel.
    dépôt distant sur GitHub :
    ```sh
    git add dangerfile.js package.json package-lock.json
-   git commit -m '[CI] Add Danger module to automate code review messages'
+   git commit -m 'Add Danger module to automate code review messages'
    git push origin master
    ```
 
@@ -227,11 +228,10 @@ cela en fonction de votre projet personnel.
 
 7. Ici, vous allez ajouter une variable d'environnement qui va permettre, lors
    du lancement du _build_ sur CodeShip, de passer le token d'API que vous avez
-   créé pour Danger. Le nom de cette variable est définie par le module Danger
-   et ce dernier sera capable de le récupérer et de l'utiliser pour ses appels à
+   créé pour Danger. Ce dernier sera capable de l'utiliser pour ses appels à
    l'API de GitHub.
 
-   Dans le champ `Key`, inidiquez `DANGER_GITHUB_API_TOKEN`. Dans le
+   Dans le champ `Key`, indiquez `DANGER_GITHUB_API_TOKEN`. Dans le
    champ `Value`, collez le token que vous avec précédemment généré sur GitHub.
    Puis, cliquez sur l'icône `+` pour ajouter cette variable :
    <p align="center">
@@ -261,9 +261,9 @@ cela en fonction de votre projet personnel.
     - Cette commande va se lancer après vos tests. Elle correspond au script
       `danger` que vous avez ajouté dans votre fichier `package.json` et exécute
       la commande `danger ci`.
-    - La commande `danger ci` est fournie par le module Danger et permet à Danger
-      de suivre les règles que vous avez établies dans le fichier `dangerfile.js`
-      et d'interagir avec GitHub en fonction de celles-ci.
+    - La commande `danger ci` est fournie par le module Danger et permet d'appliquer
+      les règles que vous avez établies dans le fichier `dangerfile.js` sur vos
+      pull requests.
 
 ## Vérification de l'implémentation de Danger
 
@@ -348,7 +348,7 @@ Pour information, Danger est également disponible en
 
 ### Votre process de travail
 
-#### S'assurer d'un _assignee_ sur vos PR
+#### S'assurer que quelqu'un soit assigné sur vos PR
 
 ```js
 import { danger, warn, fail } from 'danger'
@@ -357,12 +357,13 @@ if (!danger.github.pr.assignee) {
   const method = danger.github.pr.title.includes("WIP") ? warn : fail
 
   method(
-    `Cette pull request a besoin d'un assignee.`
+    `Cette pull request a besoin que quelqu'un soit assigné dessus.`
   )
 }
 ```
 
-Autres idées :
+#### Autres idées
+
 - Ajouter automatiquement un label
 - S'assurer du format des titres de vos PRs
 
@@ -388,7 +389,7 @@ if (danger.github.pr.body.length < 5) {
 import { danger, warn } from 'danger'
 
 danger.git.linesOfCode().then((length) => {
-  if(length > 1) {
+  if (length > 1) {
     warn(
       `Cette pull request est assez longue à lire. Est-il possible de la
       découper ?`
