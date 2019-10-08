@@ -2,13 +2,12 @@
 
 **Objectif** : ce tutoriel présente les premières étapes pour mettre en place
 une intégration continue avec CircleCI sur un de vos projets. Il vous permettra
-de créer l'environnement nécessaire pour lancer un test ou une suite de tests
-à chaque nouveau commit sur une branche nouvelle ou existante de votre projet.
+de créer l'environnement nécessaire pour lancer une suite de tests à chaque
+nouveau commit sur une branche nouvelle ou existante de votre projet.
 
 **Contexte** : nous continuerons à utiliser l'exemple avec le fichier
 [`hello_world.rb`](https://github.com/Ynote/workshop-ci/blob/master/hello_world.rb)
-dans ce tutoriel. Vous pouvez évidemment adapter cela en fonction de votre
-projet personnel.
+dans ce tutoriel. Vous pouvez adapter cela en fonction de votre projet personnel.
 
 **Niveau** : débutant.
 
@@ -23,15 +22,15 @@ projet personnel.
 ## Création du compte
 
 1. Allez sur l'url https://circleci.com/signup/ et connectez-vous avec
-votre compte GitHub:
+votre compte GitHub :
 
    <p align="center">
      <img width="467" alt="Screenshot 2019-09-27 at 12 20 53"
      src="https://user-images.githubusercontent.com/548778/65763905-abdd7380-e124-11e9-9179-5fa1aad28fd7.png">
    </p>
 
-2. Dans la fenêtre de permission pour ajouter l'application CircleCI et validez
-l'installation :
+2. Dans la fenêtre de permission, autorisez l'application CircleCI et validez
+   l'installation :
 
    <p align="center">
      <img width="609" alt="Screenshot 2019-09-27 at 12 44 15"
@@ -71,7 +70,7 @@ build sur la branche `master` est en échec :
 1. Créez une nouvelle branche `add-circle-ci-config` :
 
    ```
-   git co -b add-circle-ci-config origin/master
+   git checkout -b add-circle-ci-config origin/master
    ```
 
 2. CircleCI utilise un fichier [YAML](https://en.wikipedia.org/wiki/YAML) pour
@@ -130,7 +129,7 @@ build sur la branche `master` est en échec :
    </p>
 
 6. Sur votre pull request, cliquez sur `Show all checks` dans la section des
-   actions de la pull request. Vous pouvez voir qu'une vérification est faite
+   "checks" de la pull request. Vous pouvez voir qu'une vérification est faite
    avec l'intégration de CircleCI. Cliquez sur `Details` pour voir directement
    ce qu'il se passe sur CircleCI :
    <p align="center">
@@ -151,17 +150,17 @@ L'environnement de test est prêt. Maintenant, il faut pouvoir lancer les tests 
 
 1. Installez les dépendances nécessaires à votre projet pour lancer les tests.
    Pour cela, mettez à jour la commande de la clé `run` dans votre fichier de
-   configuration. Remplacez le `echo` avec la commande pour installer les
-   dépendances dans `.circleci/config.yml` :
+   configuration. Remplacez le `echo` avec la commande `bin/install`
+   dans `.circleci/config.yml` :
 
    ```diff
-   version: 2
-   jobs:
-     build:
-       docker:
-         - image: circleci/ruby:2.6.3
-       steps:
-         - checkout
+    version: 2
+    jobs:
+      build:
+        docker:
+          - image: circleci/ruby:2.6.3
+        steps:
+          - checkout
    -      - run: echo "Youpi ! On est dans la première étape de l'installation de notre CI :)"
    +      - run:
    +          name: Install project dependencies
@@ -176,26 +175,25 @@ L'environnement de test est prêt. Maintenant, il faut pouvoir lancer les tests 
        src="https://user-images.githubusercontent.com/548778/65778805-d93b1900-e146-11e9-98ff-3d69116798de.png">
      </p>
 
-2. Ajoutez la commande pour les tests de votre projet :
+2. Ajoutez également la commande pour lancer les tests de votre projet :
 
    ```diff
-   version: 2
-   jobs:
-     build:
-       docker:
-         - image: circleci/ruby:2.6.3
-       steps:
-         - checkout
-         - run:
-             name: Install project dependencies
-             command: bin/install
+    version: 2
+    jobs:
+      build:
+        docker:
+          - image: circleci/ruby:2.6.3
+        steps:
+          - checkout
+          - run:
+              name: Install project dependencies
+              command: bin/install
    +      - run:
    +          name: Test the project
    +          command: bundle exec rspec hello_world_spec.rb
 
-Voilà, la configuration de votre intégration continue est prête ! Vous pouvez
-ajouter davantage d'étapes et d'options en suivant les autres modules proposés
-dans ce dépôt.
+Voilà, la configuration de votre intégration continue est prête ! :tada:
+Poussez vos modifications pour voir votre nouveau build s'exécuter sur CircleCI.
 
 ## Ressources
 
