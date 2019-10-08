@@ -6,13 +6,14 @@ un build plus rapide lors du lancement des tests dans CircleCI.
 
 **Contexte** : nous continuerons à utiliser l'exemple avec le fichier
 [`hello_world.rb`](https://github.com/Ynote/workshop-ci/blob/master/hello_world.rb)
-dans ce tutoriel. Vous pouvez évidemment adapter cela en fonction de votre
+dans ce tutoriel. Vous pouvez également adapter cela en fonction de votre
 projet personnel.
 
 **Niveau** : intermédiaire.
 
 **Pré-requis** : un projet GitHub avec un fichier de configuration de base pour
-CircleCI.
+CircleCI, comme sur
+[ce tutoriel](https://github.com/Ynote/workshop-ci/blob/master/docs/circle-ci/basic-ci_FR.md).
 
 ## Sommaire
 
@@ -33,7 +34,7 @@ CircleCI.
 ## Qu'est-ce que la mise en cache ?
 
 La mise en cache de données permet de ne pas télécharger à nouveau des données
-qui ont déjà été téléchargées auparavant. Avant se lancer dans la configuration
+qui ont déjà été téléchargées auparavant. Avant de se lancer dans la configuration
 pour CircleCI, il est important de comprendre la notion de "clé de cache". Une
 clé de cache permet de savoir lorsque des données mise en cache ne sont plus
 valides.
@@ -58,25 +59,25 @@ Une bonne clé de cache doit donc être un compromis entre :
 
    ```diff
    version: 2
-   jobs:
-     build:
-       docker:
-         - image: circleci/ruby:2.6.3
+    jobs:
+      build:
+        docker:
+          - image: circleci/ruby:2.6.3
    +    environment:
    +      BUNDLE_PATH: vendor/bundle
 
-       steps:
-         - checkout
-         - run:
-             name: Install project dependencies
-             command: bin/install
-         - run:
-             name: Test the project
-             command: bundle exec rspec hello_world_spec.rb
+        steps:
+          - checkout
+          - run:
+              name: Install project dependencies
+              command: bin/install
+          - run:
+              name: Test the project
+              command: bundle exec rspec hello_world_spec.rb
    ```
 
    Note : cette étape n'est pas nécessaire pour tous les langages. Informez-vous
-   des dossiers dans lesquels vos gestionnaires dépendances installent par
+   des dossiers dans lesquels vos gestionnaires de dépendances installent par
    défaut les librairies (ex : `node_modules` pour Node). La spécification via
    une variable d'environnement peut être utile dans certains cas ou non.
 
@@ -84,22 +85,22 @@ Une bonne clé de cache doit donc être un compromis entre :
 configuration :
 
    ```diff
-   version: 2
-   jobs:
-     build:
-       docker:
-         - image: circleci/ruby:2.6.3
-       environment:
-         BUNDLE_PATH: vendor/bundle
+    version: 2
+    jobs:
+      build:
+        docker:
+          - image: circleci/ruby:2.6.3
+        environment:
+          BUNDLE_PATH: vendor/bundle
 
-       steps:
-         - checkout
-         - run:
-             name: Install project dependencies
-             command: bin/install
-         - run:
-             name: Test the project
-             command: bundle exec rspec hello_world_spec.rb
+        steps:
+          - checkout
+          - run:
+              name: Install project dependencies
+              command: bin/install
+          - run:
+              name: Test the project
+              command: bundle exec rspec hello_world_spec.rb
    +      - save_cache:
    +          key: bundler-{{ checksum "Gemfile.lock" }}
    +          paths:
@@ -119,50 +120,46 @@ configuration :
 ## Récupérer les données mises en cache pour un job donné
 
 > Pour que la mise en cache des dépendances ait une utilité, il faut à la fois
-  récupérer les données mise en cache auparavant et ne pas installer les
+  récupérer les données mise en cache auparavant pour ne pas installer les
   dépendances si ces dernières existent déjà.
 
-1. Récupérez les données mise en cache avant l'installation de vos dépendances :
+Récupérez les données mise en cache avant l'installation de vos dépendances :
 
-   ```diff
-   version: 2
-   jobs:
-     build:
-       docker:
-         - image: circleci/ruby:2.6.3
-       environment:
-         BUNDLE_PATH: vendor/bundle
+```diff
+ version: 2
+ jobs:
+   build:
+     docker:
+       - image: circleci/ruby:2.6.3
+     environment:
+       BUNDLE_PATH: vendor/bundle
 
-       steps:
-         - checkout
-   +      - restore_cache:
-   +          key: bundler-{{ checksum "Gemfile.lock" }}
-         - run:
-             name: Install project dependencies
-             command: bin/install
-         - run:
-             name: Test the project
-             command: bundle exec rspec hello_world_spec.rb
-         - save_cache:
-             key: bundler-{{ checksum "Gemfile.lock" }}
-             paths:
-               - vendor/bundle
-   ```
-   - la clé `restore_cache` indique à CircleCI qu'il faut aller récupérer les
-     données mise en cache sous la clé de cache `key`. Ces données seront
-     rangées dans les mêmes dossiers indiquées dans `save_cache.paths`.
+     steps:
+       - checkout
++      - restore_cache:
++          key: bundler-{{ checksum "Gemfile.lock" }}
+       - run:
+           name: Install project dependencies
+           command: bin/install
+       - run:
+           name: Test the project
+           command: bundle exec rspec hello_world_spec.rb
+       - save_cache:
+           key: bundler-{{ checksum "Gemfile.lock" }}
+           paths:
+             - vendor/bundle
+```
 
-2. Indiquez au gestionnaire de dépendances Bundler de ne pas installer les
-   dépendances si elles existent déjà. Dans `bin/install`, ajoutez la commande
-   `bundle check` qui permet de faire cette vérification :
+- la clé `restore_cache` indique à CircleCI qu'il faut aller récupérer les
+  données mise en cache sous la clé de cache `key`. Ces données seront
+  rangées dans les mêmes dossiers indiqués dans `save_cache.paths`.
 
-   ```diff
-   -bundle install
-   +bundle check || bundle install
-   ```
+Optionnel : vous pouvez également indiquer au gestionnaire de dépendances Bundler de ne lancer l'installation que si ses dépendances ne sont pas vérifiées. Dans `bin/install`, ajoutez la commande `bundle check` qui permet de faire cette vérification :
 
-   Note : pour d'autres languages, informez-vous de la commande à utiliser avec
-   votre gestionnaire de dépendances.
+```diff
+-bundle install
++bundle check || bundle install
+```
 
 ## Vérifier l'exécution sur CircleCI
 
