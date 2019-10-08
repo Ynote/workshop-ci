@@ -78,7 +78,7 @@ avec plusieurs langages par défaut installés dessus.
 ## Configuration du CI
 
 > L'un des points importants pour mettre en place une intégration continue sur
-un projet, c'est de d'avoir une suite de tests solides à lancer sur un
+un projet, c'est d'avoir une suite de tests solides à lancer sur un
 environnement donné. Il faut donc pouvoir installer l'environnement que l'on
 veut sur CodeShip, ainsi que lancer les tests nécessaires.
 
@@ -133,13 +133,15 @@ commande pour lancer les tests sur notre projet :
 
 ## Vérification de l'implémentation sur CodeShip
 
-> La configuration de votre intégration continue de base est prête ! Le but de
-  cette bonne pratique est de permettre aux développeurs et développeuses de
-  fixer rapidement des conflits et d'être le plus à jour possible sur la base de
-  code commune, à savoir la branche `master` dans la plupart des cas. Pour
-  comprendre son impact direct sur un projet, nous allons créer ensemble une
-  pull request, vérifier l'exécution de CodeShip dessus et merger cette pull
-  request dans `master`.
+> La configuration de votre intégration continue de base est prête !
+>
+> Maintenant les développeurs et développeuses peuvent fixer rapidement
+> des conflits et les ajouter le plus vite possible sur la base de code
+> commune, à savoir la branche `master` dans la plupart des cas.
+>
+> Pour comprendre son impact direct sur un projet, nous allons créer ensemble une
+> pull request, vérifier l'exécution de CodeShip dessus et merger cette pull
+> request dans `master`.
 
 1. Créez une nouvelle branche `update-readme` sur votre dépôt :
    ```sh
@@ -218,7 +220,7 @@ commande pour lancer les tests sur notre projet :
    </p>
 
 11. Retournez sur votre pull request sur GitHub. Vous pouvez y voir également
-    directement que l'état de votre _build_ :
+    directement l'état de votre _build_ :
     <p align="center">
       <img width="1087" alt="Screenshot 2019-10-06 at 16 54 25"
       src="https://user-images.githubusercontent.com/548778/66271064-0b8cfa80-e85a-11e9-803f-27be7ac29a2f.png">
@@ -226,7 +228,7 @@ commande pour lancer les tests sur notre projet :
 
 12. Maintenant que vous êtes assurés que votre pull request n'a pas de conflit
     avec la branche `master` et qu'elle passe bien tous vos tests de façon
-    automotique, vous savez que vous pouvez merger votre pull request en toute
+    automatique, vous savez que vous pouvez merger votre pull request en toute
     tranquilité. Cliquez sur `Merge pull request` :
     <p align="center">
       <img width="805" alt="Screenshot 2019-10-06 at 16 57 03"
