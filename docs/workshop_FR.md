@@ -27,8 +27,7 @@
 - Vérifier le Wifi
 - Écrire le code Wifi pour le rendre visible aux participants et participantes
 - Écrire le lien vers le dépôt Git de l'atelier
-- Organiser les tables en groupes de 4 ou 5 si cela est possible
-- Préparer les questions pour sonder le niveau des participants
+- Organiser les tables en groupes de 5 ou 6 si cela est possible, par niveau
 - Installer un tableau blanc
 - Installer une table d'accueil
 
@@ -36,9 +35,8 @@
 
 - Bonjour,
 - Leur demander leur prénom et se présenter,
-- Leur dire de s'installer et préparer leur ordinateur,
-- Leur faire lire les instructions (wifi, dépôt Git, etc),
-- Leur demander d'écrire leur prénom sur un Post-It.
+- Leur dire de s'installer sur une table correspondant à leur niveau et préparer leur ordinateur,
+- Leur faire lire les instructions (wifi, dépôt Git, etc).
 
 ### Présentation du déroulement de l'atelier
 
@@ -65,16 +63,15 @@
   * Présentation rapide théorique (20 minutes),
   * Exercice commun tous ensemble pour comprendre l'intégration continue et sa
     mise en place (50 minutes),
+  * Pause,
   * Modules personnalisés en fonction des problématiques qui intéressent les
-    participants et participantes. (1h30)
+    participants et participantes, (1h30)
   * Rétrospective, merci et partage des ressources (10 minutes)
 
 - Demander aux participants et participantes de prendre une minute pour parler à
   leur voisin ou voisine.
 
-- Expliquer le principe du Post-It pour demander de l'aide et encourager ceux et
-  celle qui se sentent d'attaque d'offrir leur aide aux autres.
-
-## Intervenir pour aider
-
-- Utiliser un Post-It de couleur pour demander de l'aide
+- Expliquer le principe du Post-It :
+  * Écrire son prénom,
+  * Le coller sur son ordi pour demander de l'aide,
+  * Offrir son aide aux autres si on se sent d'attaque.
