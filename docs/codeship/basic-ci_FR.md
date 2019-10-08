@@ -2,8 +2,8 @@
 
 **Objectif** : ce tutoriel présente les premières étapes pour mettre en place
 une intégration continue avec CodeShip sur un de vos projets. Il vous permettra
-de créer l'environnement nécessaire pour lancer un test ou une suite de tests
-à chaque nouveau commit sur une branche nouvelle ou existante de votre projet.
+de créer l'environnement nécessaire pour lancer une suite de tests à chaque
+nouveau commit sur une branche nouvelle ou existante de votre projet.
 
 **Niveau** : débutant.
 
