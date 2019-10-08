@@ -10,7 +10,7 @@ personnel.
 **Niveau** : intermédiaire.
 
 **Pré-requis** : un projet GitHub avec une application dynamique (Node.js, PHP,
-Rails, Python, etc.)
+Ruby, Python, Clojure, Java, Gradle, JVM, Grails, Scala, Play ou Go).
 
 ## Sommaire
 
