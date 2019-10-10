@@ -22,6 +22,7 @@ ce tutoriel.
 - [Création de votre espace de travail](#création-de-votre-espace-de-travail)
 - [Installation des dépendances pour l'atelier](#installation-des-dépendances-pour-latelier)
 - [Configuration pour GitHub](#configuration-pour-github)
+- [Créer un nouveau container](#créer-un-nouveau-container)
 - [Retrouver sa console](#retrouver-sa-console)
 
 ## Fork du projet tutoriel
@@ -203,6 +204,52 @@ pour avoir un fork de ce dépôt Git sur votre compte personnel GitHub :
 
 Voilà ! Votre environnement de développement est prêt ! Vous allez pouvoir
 commencer l'implémentation d'une intégration continue dessus.
+
+Les deux sections suivantes ne sont pas nécessaire pour [suivre l'exercice
+commun de base sur l'intégration
+continue](https://github.com/Ynote/workshop-ci/blob/master/docs/codeship/basic-ci_FR.md).
+
+## Créer un nouveau container
+
+Pour suivre certains tutoriels, vous devrez créer un nouveau container (par
+exemple, pour avoir un environnement Node.js). Dans la version gratuite de
+Codeanywhere, il n'est possible d'avoir qu'un seul container à la fois. Pour
+créer un nouveau container, suivez les étapes suivantes :
+
+1. Supprimez donc le container créé précédemment faisant un clic-droit sur
+   votre container existant (par exemple, `workshop-CI`) et cliquez sur
+   `Destroy` :
+   <p align="center">
+     <img width="569" alt="Screenshot 2019-10-10 at 20 29 31"
+     src="https://user-images.githubusercontent.com/548778/66596391-17035d00-eb9d-11e9-88ef-20b6e3c31164.png">
+   </p>
+
+2. Créez un nouveau container en cliquant dans le menu sur
+   `File > New Connection > Git from URL` :
+   <p align="center">
+     <img width="857" alt="Screenshot 2019-10-10 at 20 34 14"
+     src="https://user-images.githubusercontent.com/548778/66596545-621d7000-eb9d-11e9-85e1-3bc2b5826fe8.png">
+   </p>
+
+3. Utilisez le dépôt que vous venez de fork ou celui sur lequel vous voulez
+   travailler (par exemple,
+   `https://github.com/VOTRE=NOM-UTILISATEUR/workshop-express-example`) et
+   cliquez sur `Next` :
+
+   <p align="center">
+     <img width="877" alt="Screenshot 2019-10-10 at 20 35 37"
+     src="https://user-images.githubusercontent.com/548778/66596671-9db83a00-eb9d-11e9-9928-96cbe671d879.png">
+   </p>
+
+4. Choisissez un nouveau nom de projet et le container Node.js pour pour
+   `Ubuntu 16.04` et cliquez sur `Create` :
+   <p align="center">
+     <img width="887" alt="Screenshot 2019-10-10 at 20 35 55"
+     src="https://user-images.githubusercontent.com/548778/66596752-b7f21800-eb9d-11e9-8b81-e32e39578c0e.png">
+   </p>
+
+Voilà, votre nouvel environnement de développement est prêt ! Vous pouvez
+continuer à suivre le tutoriel sur lequel vous travailliez.
 
 ## Retrouver sa console
 
