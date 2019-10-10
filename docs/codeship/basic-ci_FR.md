@@ -27,12 +27,18 @@ votre compte GitHub:
      src="https://user-images.githubusercontent.com/548778/62837132-1ec18680-bc6c-11e9-84db-4544cde8afc1.png">
    </p>
 
-2. Dans la fenêtre de permission pour ajouter l'application CodeShip, renseignez le
-dépôt Git que nous venons de forker et validez l'installation :
+2. Dans la fenêtre de permission, autorisez l'application CodeShip :
 
    <p align="center">
-     <img width="555" alt="Screenshot 2019-08-11 at 18 53 03"
-     src="https://user-images.githubusercontent.com/548778/62837158-7233d480-bc6c-11e9-8a27-64c85e5658bd.png">
+     <img width="587" alt="Screenshot 2019-10-10 at 21 02 58"
+     src="https://user-images.githubusercontent.com/548778/66598536-867b4b80-eba1-11e9-8a19-047a6946ae88.png">
+   </p>
+
+3. Créez votre organisation en lui donnant le nom que vous souhaitez et cliquez
+   sur `Create Organisation` :
+   <p align="center">
+     <img width="711" alt="Screenshot 2019-10-10 at 21 04 55"
+     src="https://user-images.githubusercontent.com/548778/66598625-b32f6300-eba1-11e9-8d23-844032603ba9.png">
    </p>
 
 ## Ajout d'un projet
@@ -57,7 +63,22 @@ haut à droite de votre fenêtre :
      src="https://user-images.githubusercontent.com/548778/62837194-030ab000-bc6d-11e9-9a7f-e59c1ac3c0ac.png">
    </p>
 
-3. Sélectionnez votre organisation et votre dépôt Git :
+3. Installez l'application GitHub pour CodeShip en cliquant sur le lien `install
+   our GitHub App` :
+   <p align="center">
+     <img width="974" alt="Screenshot 2019-10-10 at 21 10 14"
+     src="https://user-images.githubusercontent.com/548778/66598985-921b4200-eba2-11e9-869a-0e61c3951221.png">
+   </p>
+
+4. Dans la fenêtre de permission pour ajouter l'application CodeShip, renseignez
+   le dépôt Git que nous venons de forker et validez l'installation :
+   <p align="center">
+     <img width="631" alt="Screenshot 2019-10-10 at 21 13 29"
+     src="https://user-images.githubusercontent.com/548778/66599138-e0304580-eba2-11e9-97c3-ed7ef599089f.png">
+   </p>
+
+3. Sélectionnez votre organisation et votre dépôt Git. Puis, cliquez sur
+   `Connect` :
 
    <p align="center">
      <img width="854" alt="Screenshot 2019-08-11 at 18 53 46"
@@ -83,8 +104,9 @@ environnement donné. Il faut donc pouvoir installer l'environnement que l'on
 veut sur CodeShip, ainsi que lancer les tests nécessaires.
 
 1. Dans un premier temps, nous allons indiquer à CodeShip quelles commandes sont
-nécessaires pour installer les dépendances de notre application. Pour cela, dans
-la section `Setup commands`, écrivez :
+nécessaires pour installer les dépendances de notre application, comme vous
+l'avez fait précédemment pour votre environnement de développement. Pour cela,
+dans la section `Setup commands`, écrivez :
 
    ```
    bin/install
@@ -143,13 +165,15 @@ commande pour lancer les tests sur notre projet :
 > pull request, vérifier l'exécution de CodeShip dessus et merger cette pull
 > request dans `master`.
 
-1. Créez une nouvelle branche `update-readme` sur votre dépôt :
+1. En local (ou sur Codeanywhere), créez une nouvelle branche `update-readme`
+   sur votre dépôt :
    ```sh
-   git checkout -b update-readme origin/master
+   git checkout -b update-readme
    ```
 
 2. Avec votre éditeur préféré, ajoutez une modification sur le fichier
-   `README.md` :
+   `README.md` (sur Codeanywhere, il suffit de double-cliquer sur le fichier
+   pour pouvoir l'éditer):
    <p align="center">
      <img width="695" alt="Screenshot 2019-10-06 at 16 13 02"
      src="https://user-images.githubusercontent.com/548778/66270456-38d6aa00-e854-11e9-8b09-9e2a19f889ca.png">
