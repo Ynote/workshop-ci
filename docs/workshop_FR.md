@@ -68,8 +68,12 @@
     > qui, pour certains ou certaines, va prendre du temps (ou non). N'hésitez pas à demander de
     > l'aide quand vous êtes bloqué·e. Il n'y a aucune question stupide, on est là justement pour
     > répondre à vos interrogations. Parfois, il est nécessaire de se faire expliquer un concept
-    > plusieurs fois et par différentes personnes pour pouvoir bien l'appréhender.
-  * Pause,
+    > plusieurs fois et par différentes personnes pour pouvoir bien l'appréhender. Certaines personnes 
+    > finiront l'exercice avant la pause. Venez nous voir pour que l'on vous présente la suite de l'atelier.
+    > Après la pause, nous vous présenterons rapidement les modules personnalisés qui sont disponibles. 
+    > Pour ceux et celles qui n'auront pas fini l'exercice avant la pause, reprenez tranquillement à votre 
+    > rythme après un petit thé ou un petit café. 
+  * Pause
   * Modules personnalisés en fonction des problématiques qui intéressent les
     participants et participantes, (1h30)
   * Rétrospective, merci et partage des ressources (10 minutes)
