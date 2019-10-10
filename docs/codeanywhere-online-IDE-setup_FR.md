@@ -186,7 +186,8 @@ pour avoir un fork de ce dépôt Git sur votre compte personnel GitHub :
      src="https://user-images.githubusercontent.com/548778/65901868-5c63a580-e3b9-11e9-8e32-00824bfcf908.png">
    </p>
 
-Voilà ! Votre environnement de développement est prêt !
+Voilà ! Votre environnement de développement est prêt ! Vous allez pouvoir
+commencer l'implémentation d'une intégration continue dessus.
 
 ## Retrouver sa console
 
