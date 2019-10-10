@@ -40,14 +40,14 @@
 
 ### Présentation du déroulement de l'atelier
 
-- Présentation de Sunny, moi-même et KissKiss
+- Présentation de Sunny, moi-même et KissKiss (5 minutes)
 > Quand on est arrivé chez KissKiss, les déploiements se faisaient à la main
   en cliquant sur un bouton dans Amazon Opsworks (pour ceux qui ne connaissent
   pas c’est …). On envoyait ensuite un mail à toute la boite avec la liste de
   PRs mergées avec un gif. C’était sympa mais il faut être honnête, pas
   franchement solide comme process.
 
-- Présentation des objectifs de l'atelier :
+- Présentation des objectifs de l'atelier : (5 minutes)
   * Mettre en place une intégration continue sur un dépôt Git,
   * Découvrir différents outils d'automatisation,
   * Donner des exemples concrets et en production sur la stack de KissKiss,
@@ -59,10 +59,16 @@
   pour le mettre en place sur une chaine de production dans votre équipe et
   quelques outils utiles d’automatisation.
 
-- Présentation des étapes de l'atelier :
-  * Présentation rapide théorique (20 minutes),
+- Présentation des étapes de l'atelier : (2 minutes)
+  * Présentation rapide théorique (15 minutes),
   * Exercice commun tous ensemble pour comprendre l'intégration continue et sa
     mise en place (50 minutes),
+    > Pour l'exercice commun, on va tous commencer ensemble, mais chaque personne avance à son 
+    > rythme, en aidant son voisin ou sa voisine si on le veut. Il y a une partie "Installation"
+    > qui, pour certains ou certaines, va prendre du temps (ou non). N'hésitez pas à demander de
+    > l'aide quand vous êtes bloqué·e. Il n'y a aucune question stupide, on est là justement pour
+    > répondre à vos interrogations. Parfois, il est nécessaire de se faire expliquer un concept
+    > plusieurs fois et par différentes personnes pour pouvoir bien l'appréhender.
   * Pause,
   * Modules personnalisés en fonction des problématiques qui intéressent les
     participants et participantes, (1h30)
