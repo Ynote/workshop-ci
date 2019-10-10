@@ -19,16 +19,31 @@ Pour pouvoir suivre cet atelier en toute tranquilité, il vous faudra :
 - avoir une connaissance basique de Git,
 - avoir votre propre compte GitHub.
 
-En fonction de votre niveau en développement et de l'environnement qui est
-installé sur votre ordinateur :
-  - si vous savez gérer l'installation d'un nouveau langage sur votre ordinateur,
-    installez Ruby 2.6.3 et créez un fork de [ce présent dépôt](https://github.com/Ynote/workshop-ci),
-  - sinon suivez [ce
-    tutoriel](https://github.com/Ynote/workshop-ci/blob/master/docs/codeanywhere-online-IDE-setup_FR.md)
-    pour utiliser l'IDE Codeanywhere en ligne. Cela vous permettra de suivre les
-    tutoriels de cet atelier directement via une interface web.
-
 ## Exercice commun
+
+### Environnement de développement
+
+Afin de comprendre l'implémentation continue sur un projet, nous allons partir
+d'un exemple concret qui se trouve sur le présent dépôt Git. Pour pouvoir suivre
+les étapes de l'intégration continue, il faut donc d'abord mettre en place un
+environnement de développement avec ce projet d'exemple. Ce dernier est écrit en
+Ruby, mais il n'est pas nécessaire de connaître ce langage pour pouvoir suivre
+cet exercice.
+
+En fonction de votre niveau en "ordinateur" :
+- si Ruby est déjà installé sur votre ordinateur ou si vous savez gérer
+  l'installation d'un nouveau langage sur votre ordinateur, [suivez ce
+  tutoriel](https://github.com/Ynote/workshop-ci/blob/master/docs/getting-started_FR.md)
+  qui vous permettra de suivre les autres tutoriels de cet atelier directement
+  sur votre machine.
+- sinon, si vous n'avez pas envie de vous embarasser avec l'installation d'un
+  nouveau langage ou que vous n'avez pas cette connaissance, [suivez ce tutoriel
+  pour utiliser l'IDE Codeanywhere en
+  ligne](https://github.com/Ynote/workshop-ci/blob/master/docs/codeanywhere-online-IDE-setup_FR.md).
+  Cela vous permettra de suivre les tutoriels de cet atelier directement via une
+  interface web.
+
+### Implémentation de l'intégration continue
 
 Nous vous proposons de mettre en place tous ensemble une intégration continue sur
 ce présent projet avec [Codeship](https://codeship.com/). Le projet de ce dépôt
@@ -38,8 +53,7 @@ contient :
 - un fichier de test associé
   [`hello_world_spec.rb`](https://github.com/Ynote/workshop-ci/blob/master/hello_world_spec.rb).
 
-Il n'est pas nécessaire de connaître le langage Ruby pour pouvoir suivre ce
-tutoriel. [Lançons-nous !](/docs/codeship/basic-ci_FR.md)
+[Lançons-nous dans ce tutoriel !](/docs/codeship/basic-ci_FR.md)
 
 ## Aller plus loin selon vos envies
 
