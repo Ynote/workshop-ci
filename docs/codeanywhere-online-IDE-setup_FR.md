@@ -205,6 +205,27 @@ pour avoir un fork de ce dépôt Git sur votre compte personnel GitHub :
 Voilà ! Votre environnement de développement est prêt ! Vous allez pouvoir
 commencer l'implémentation d'une intégration continue dessus.
 
+Dernières astuces :
+
+- Pour éditer un fichier, cliquez dessus directement dans la colonne de gauche :
+  <p align="center">
+    <img width="401" alt="Screenshot 2019-10-10 at 21 56 46"
+    src="https://user-images.githubusercontent.com/548778/66601788-fe993f80-eba8-11e9-9e0d-d52792acc222.png">
+  </p>
+
+- Pour l'enregistrer, cliquez sur la petite icône `Save` dans la barre d'outil :
+  <p align="center">
+    <img width="608" alt="Screenshot 2019-10-10 at 21 56 54 2"
+    src="https://user-images.githubusercontent.com/548778/66601853-1a044a80-eba9-11e9-9307-5f424990a1eb.png">
+  </p>
+
+- Pour créer un nouveau fichier, cliquez sur la petite icône `New file` et vous
+  pourrez lui donner un nom lorsque vous l'enregistrerez :
+  <p align="center">
+    <img width="608" alt="Screenshot 2019-10-10 at 21 56 54"
+    src="https://user-images.githubusercontent.com/548778/66601881-2dafb100-eba9-11e9-9360-52f3f95f248b.png">
+  </p>
+
 Les deux sections suivantes ne sont pas nécessaire pour [suivre l'exercice
 commun de base sur l'intégration
 continue](https://github.com/Ynote/workshop-ci/blob/master/docs/codeship/basic-ci_FR.md).
