@@ -248,11 +248,24 @@ créer un nouveau container, suivez les étapes suivantes :
      src="https://user-images.githubusercontent.com/548778/66596752-b7f21800-eb9d-11e9-8b81-e32e39578c0e.png">
    </p>
 
-5. Reprenez l'[étape de la configuration
-   GitHub](https://github.com/Ynote/workshop-ci/blob/master/docs/codeanywhere-online-IDE-setup_FR.md#configuration-pour-github)
-   en changeant l'url de votre dépôt par celui que vous avez ajouté (par
-   exemple,
-   `https://github.com/VOTRE=NOM-UTILISATEUR/workshop-express-example`).
+5. Configurez à nouveau correctement le serveur distant de votre dépôt Git avec
+   une authentification SSH :
+   ```sh
+   # Suppression du serveur distant
+   git remote remove origin
+
+   # Ajout du serveur distant SSH
+   git remote add origin git@github.com:VOTRE-NOM-UTILISATEUR/VOTRE-DÉPÔT.git
+
+   # Vérification du serveur distant
+   git remote -v
+   ```
+
+6. Pour vérifier que votre connexion ssh avec GitHub fonctionne bien, tapez dans
+   votre console :
+   ```sh
+   ssh -T git@github.com
+   ```
 
 Voilà, votre nouvel environnement de développement est prêt ! Vous pouvez
 continuer à suivre le tutoriel sur lequel vous travailliez.
