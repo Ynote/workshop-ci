@@ -73,8 +73,6 @@ envie :
 - [L'automatisation de vos conventions d'écriture avec Danger et
   CodeShip](https://github.com/Ynote/workshop-ci/blob/master/docs/codeship/automated-pull-request-convention-review_FR.md)
 
-## Ressources
-- [Blog post - Faire des revues de code automatique avec Pronto et
-  CircleCI](https://lafabrique.kisskissbankbank.com/faire-des-revues-automatiques-de-code-avec-pronto-et-circleci-76f1f7928dfc)
-- [How to get to continuous integration by
-  Atlassian](https://www.atlassian.com/fr/continuous-delivery/continuous-integration/how-to-get-to-continuous-integration)
+Si vous êtes ultra motivé·e, nous avons listé [des liens et quelques pistes de
+travail](https://github.com/Ynote/workshop-ci/blob/master/docs/other-resources_FR.md)
+pour vous permettre de continuer à améliorer votre intégration continue.
