@@ -66,16 +66,22 @@ d'exemple vous pouvez utiliser un projet personnel en Node.js.
      avant de poursuivre l'exercice.
 
 3. Reprenez le tutoriel sur l'[intégration continue avec
-   CodeShip](https://github.com/Ynote/workshop-ci/blob/master/docs/codeship/basic-ci_FR.md)
-   et ajoutez CodeShip sur votre projet et configurez-le de la façon suivante :
-   - Choisissez le dépôt sur lequel vous voulez travailler,
+   CodeShip à partir de l'ajout d'un projet](https://github.com/Ynote/workshop-ci/blob/master/docs/codeship/basic-ci_FR.md#ajout-dun-projet).
+   Ajoutez CodeShip sur votre projet et configurez-le de la façon suivante :
+   - Autorisez l'accès à ce nouveau dépôt Git à l'application CodeShip en
+     cliquant sur `given us the proper permission` :
+     <p align="center">
+       <img width="979" alt="Screenshot 2019-10-10 at 21 37 26"
+       src="https://user-images.githubusercontent.com/548778/66600699-5f734880-eba6-11e9-9fa7-b62007f286ab.png">
+     </p>
+   - Puis, choisissez le dépôt sur lequel vous voulez travailler,
    - Pour la section `Setup commands`, utilisez la commande : `npm install`,
    - Pour le pipeline de test, ajoutez la commande : `npm test`.
 
 4. En local, faites une modification sur la branche `master` de votre dépôt pour
    vérifier que la configuration des _builds_ sur CodeShip fonctionne bien :
-   1. Faites une modification dans le fichier `README.md` avec votre éditeur
-      favori :
+   1. En local (ou sur Codeanywhere), faites une modification dans le fichier
+      `README.md` avec votre éditeur favori :
       <p align="center">
         <img width="562" alt="Screenshot 2019-10-06 at 18 07 04"
         src="https://user-images.githubusercontent.com/548778/66271959-22384f00-e864-11e9-8548-3bf628398472.png">
@@ -110,11 +116,12 @@ d'exemple vous pouvez utiliser un projet personnel en Node.js.
      alt="Présentation de Danger">
    </p>
 
-2. Ajoutez Danger à votre projet en tant que dépendance de développement :
+2. En local (ou sur Codeanywhere), ajoutez Danger à votre projet en tant que
+   dépendance de développement :
    ```sh
    npm add --save-dev --save-exact danger
    ```
-   _L'argument `--save-exact` permets d'avoir une version fixe dans le
+   _L'argument `--save-exact` permet d'avoir une version fixe dans le
    `package.json`. Cela vous assure un build plus déterministe, qui sera
    exactement le même build sur votre environnement local et celui de
    votre intégration continue._
@@ -170,8 +177,8 @@ d'exemple vous pouvez utiliser un projet personnel en Node.js.
    - En local, cette commande est inutile car l'usage de Danger est uniquement
      restreint aux pull requests.
 
-5. Ajoutez toutes ces modifications sur votre projet et poussez-le sur votre
-   dépôt distant sur GitHub :
+5. Dans votre console, ajoutez toutes ces modifications sur votre projet et
+   poussez-le sur votre dépôt distant sur GitHub :
    ```sh
    git add dangerfile.js package.json package-lock.json
    git commit -m 'Add Danger module to automate code review messages'
@@ -279,7 +286,7 @@ d'exemple vous pouvez utiliser un projet personnel en Node.js.
   Danger se lance bien selon la règle que nous avons ajouté dans le fichier
   `dangerfile.js`.
 
-1. En local, créez une nouvelle branche :
+1. En local (ou sur Codeanywhere), créez une nouvelle branche :
    ```sh
    git checkout -b test-danger
    ```
@@ -317,8 +324,9 @@ d'exemple vous pouvez utiliser un projet personnel en Node.js.
      src="https://user-images.githubusercontent.com/548778/66315397-02f9fa00-e916-11e9-9ed4-ae4ea96aa532.png">
    </p>
 
-6. Cliquez sur le lien `Details` dans la section des "checks" pour voir si
-   l'implémentation de Danger est correctement exécutée dans CodeShip :
+6. Ouvrez dans une nouvelle fenêtre le lien `Details` dans la section des
+   "checks" pour voir si l'implémentation de Danger est correctement exécutée
+   dans CodeShip :
    <p align="center">
      <img width="1117" alt="Screenshot 2019-10-07 at 15 20 45"
      src="https://user-images.githubusercontent.com/548778/66316022-296c6500-e917-11e9-8f98-89433b8bce62.png">
