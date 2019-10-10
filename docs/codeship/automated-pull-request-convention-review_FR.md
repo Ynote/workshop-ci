@@ -45,18 +45,25 @@ d'exemple vous pouvez utiliser un projet personnel en Node.js.
      src="https://user-images.githubusercontent.com/548778/65818660-cb9f9500-e213-11e9-8d26-ad1e51945822.png">
    </p>
 
-2. En local, clonez ce dépôt avec l'url fournie sur l'interface de GitHub :
-   <p align="center">
-     <img width="1054" alt="Screenshot 2019-10-06 at 18 01 13"
-     src="https://user-images.githubusercontent.com/548778/66271886-7abb1c80-e863-11e9-9028-2c6cc1603e58.png">
-   </p>
+2. En local :
+   - si vous travaillez directement sur votre ordinateur,
+     clonez ce dépôt avec l'url fournie sur l'interface de GitHub :
+     <p align="center">
+       <img width="1054" alt="Screenshot 2019-10-06 at 18 01 13"
+       src="https://user-images.githubusercontent.com/548778/66271886-7abb1c80-e863-11e9-9028-2c6cc1603e58.png">
+     </p>
 
-   ```sh
-   git clone git@github.com:VOTRE-NOM-UTILISATEUR/workshop-express-example.git
-   ```
+     ```sh
+     git clone git@github.com:VOTRE-NOM-UTILISATEUR/workshop-express-example.git
+     ```
 
-   Assurez-vous d'utiliser un clone en SSH. Cela sera plus facile d'utilisation
-   pour la suite.
+     Assurez-vous d'utiliser un clone en SSH. Cela sera plus facile d'utilisation
+     pour la suite.
+
+   - si vous travaillez avec Codeanywhere, l'offre gratuite ne permet d'avoir
+     qu'un seul container, [suivez ce tutoriel pour créer un nouveau
+     container](https://github.com/Ynote/workshop-ci/blob/master/docs/codeanywhere-online-IDE-setup_FR.md#créer-un-nouveau-container)
+     avant de poursuivre l'exercice.
 
 3. Reprenez le tutoriel sur l'[intégration continue avec
    CodeShip](https://github.com/Ynote/workshop-ci/blob/master/docs/codeship/basic-ci_FR.md)
