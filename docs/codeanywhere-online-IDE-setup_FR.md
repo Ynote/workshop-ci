@@ -112,19 +112,17 @@ pour avoir un fork de ce dépôt Git sur votre compte personnel GitHub :
 
 ## Installation des dépendances pour l'atelier
 
-> Lorsque votre container est crée, deux onglets vont automatiquement s'ouvrir.
-  Vous pouvez fermer le dernier onglet. Dans le premier onglet, vous disposerez
-  d'une console en ligne dans un environnement créé spécifiquement pour notre
-  atelier.
+1. Lorsque votre container est créé, [ouvrez une console en
+   ligne](#retrouver-sa-console).
 
-1. Installez les dépendances liées à notre projet. Dans votre console, tapez :
+2. Installez les dépendances liées à notre projet. Dans votre console, tapez :
 
    ```sh
    bin/install
    ```
 
 
-2. Les dépendances installées sont principalement liées à la commande `rspec` qui
+3. Les dépendances installées sont principalement liées à la commande `rspec` qui
    va nous permettre de lancer les tests sur notre projet. Pour tester que ces
    dépendances ont bien été installées, testez `rspec` en tapant :
 
@@ -138,7 +136,7 @@ pour avoir un fork de ce dépôt Git sur votre compte personnel GitHub :
    1 example, 0 failures
    ```
 
-   Voici un screenshot des commandes ci-dessous et leur output :
+   Voici une capture d'écran des commandes ci-dessous et leur output :
 
    <p align="center">
      <img width="1440" alt="Screenshot 2019-07-28 at 17 59 43"
@@ -184,6 +182,23 @@ pour avoir un fork de ce dépôt Git sur votre compte personnel GitHub :
    <p align="center">
      <img width="1015" alt="Screenshot 2019-09-30 at 19 32 17"
      src="https://user-images.githubusercontent.com/548778/65901868-5c63a580-e3b9-11e9-8e32-00824bfcf908.png">
+   </p>
+
+5. Pour vérifier que votre connexion ssh avec GitHub fonctionne bien, tapez dans
+   votre console :
+   ```sh
+   ssh -T git@github.com
+   ```
+
+   Cela devrait vous retourner un message de ce type :
+   ```sh
+   Warning: Permanently added 'github.com,140.82.114.3' (RSA) to the list of known hosts.
+   Hi VOTRE-NOM-UTILISATEUR! You've successfully authenticated, but GitHub does not provide shell access.
+   ```
+
+   Voici une capture d'écran de l'output de cette commande :
+   <p align="center">
+     <img width="674" alt="Screenshot 2019-10-10 at 20 09 23" src="https://user-images.githubusercontent.com/548778/66594843-2af98f80-eb9a-11e9-9e36-79e018219593.png">
    </p>
 
 Voilà ! Votre environnement de développement est prêt ! Vous allez pouvoir
