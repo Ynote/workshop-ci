@@ -2,21 +2,21 @@
 
 ## Outils d'intégration continue
 
-D'autres outils à tester.
+D'autres outils à tester :
 
-- [Getting started with Travis](https://docs.travis-ci.com/user/tutorial/)
+- [Getting started with Travis](https://docs.travis-ci.com/user/tutorial/),
 - [Getting started with
-  Jenkins](https://jenkins.io/doc/pipeline/tour/getting-started/)
+  Jenkins](https://jenkins.io/doc/pipeline/tour/getting-started/),
 - [Using GitHub Actions](https://lab.github.com/github/hello-github-actions!)
   (ce tutoriel nécessite de tout d'abord s'enregistrer à
-  [GitHub Actions Beta](https://github.com/features/actions/signup/))
+  [GitHub Actions Beta](https://github.com/features/actions/signup/)),
 - [Getting started with GitLab
-  CI/CD](https://docs.gitlab.com/ee/ci/quick_start/README.html)
+  CI/CD](https://docs.gitlab.com/ee/ci/quick_start/README.html).
 
 ## Revue de code automatique
 
 Pour ne lancer les tests ou les linters que sur ce qui change dans votre PR
-et en faire des messages sur votre Pull-Request, vous pouvez utiliser un outil
+et en faire des messages sur votre pull request, vous pouvez utiliser un outil
 comme [Pronto](https://github.com/prontolabs/pronto), voir aussi [Ruby et
 GitHub : faire des revues de code automatique avec Pronto et
 CircleCI](https://lafabrique.kisskissbankbank.com/faire-des-revues-automatiques-de-code-avec-pronto-et-circleci-76f1f7928dfc)
@@ -29,51 +29,52 @@ linters](https://blog.nathanaelcherrier.com/fr/linting-good-practices/) servent
 à encourager ou forcer des conventions et bonnes pratiques. Il existe des
 linters pour multitudes de langages. Par exemple :
 
-- [webhint](https://webhint.io/docs/user-guide/) pour les bonnes pratiques Web
-- [ESLint](https://eslint.org/docs/user-guide/getting-started) pour JavaScript
+- [webhint](https://webhint.io/docs/user-guide/) pour les bonnes pratiques Web,
+- [ESLint](https://eslint.org/docs/user-guide/getting-started) pour JavaScript,
 - [eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)
-  pour tester l'accessibilité via ESLint
-- [stylelint](https://stylelint.io/) pour CSS et SCSS
-- [RuboCop](https://github.com/rubocop-hq/rubocop) pour Ruby
-- [phplint](https://www.npmjs.com/package/phplint) pour PHP
-- [pylint](http://pylint.pycqa.org/en/latest/) pour Python
-- [proselint](https://github.com/wooorm/alex) pour améliorer sa prose en anglais
-- [et bien d'autres encore…](https://github.com/caramelomartins/awesome-linters)
+  pour tester l'accessibilité via ESLint,
+- [stylelint](https://stylelint.io/) pour CSS et SCSS,
+- [RuboCop](https://github.com/rubocop-hq/rubocop) pour Ruby,
+- [phplint](https://www.npmjs.com/package/phplint) pour PHP,
+- [pylint](http://pylint.pycqa.org/en/latest/) pour Python,
+- [proselint](https://github.com/wooorm/alex) pour améliorer sa prose en anglais,
+- [et bien d'autres encore…](https://github.com/caramelomartins/awesome-linters).
 
 ## Tests
 
-En fonction de votre application et des languages utilisés il y a de nombreuses
+En fonction de votre application et des languages utilisés, il y a de nombreuses
 façon de faire des tests. Ils peuvent être unitaires, fonctionnels, "end to end".
 
 ## Couverture de code
 
-Des outils automatisés vous permettent Savoir à quel point les tests couvrent
-votre code:
+Des outils automatisés vous permettent de savoir à quel point les tests couvrent
+votre code :
 
 - [simplecov](https://github.com/colszowka/simplecov) en Ruby
 - [instanbul.js](https://istanbul.js.org) en JavaScript
 - [coverage.py](https://coverage.readthedocs.io/en/v4.5.x/) en Python
 
-Une fois les métriques de couverture générées on pourra générer un rapport et
+Une fois les métriques de couverture générées, on pourra générer un rapport et
 l'envoyer quelque part via d'autres outils. Un service comme
-[Codecov](https://codecov.io) vous permets d'héberger et comparer votre couverture
+[Codecov](https://codecov.io) vous permet d'héberger et comparer votre couverture
 au fil du temps.
 
 ## Tester les changements visuels
 
 Vous pouvez comparer des captures d'écran grâce à différents outils qui testent
-les régressions visuelles [Percy](https://percy.io).
+les régressions visuelles comme [Percy](https://percy.io).
 
 ## Auditer les dépendances
 
-Un CI peut permettre de s'assurer que les librairies qu'on utilise ne contiennent
-pas de failles de sécurité connues en lançant automatiquement un script qui
-compare les dépendances avec des listes de soucis de sécurité. Par exemple:
+Une intégration continue peut permettre de s'assurer que les librairies qu'on 
+utilise ne contiennent pas de failles de sécurité connues en lançant automatiquement 
+un script qui compare les dépendances avec des listes de soucis de sécurité. 
+Par exemple:
 
 - `npm audit` pour s'assurer qu'on a pas de vulnérabilités dans nos paquets
-  JavaScript
+  JavaScript,
 - `bundler audit` pour s'assurer qu'on a pas de vulnérabilités dans nos paquets
-  Ruby
+  Ruby.
 
 ## Script de déploiement
 
