@@ -19,9 +19,9 @@ Pour pouvoir suivre cet atelier en toute tranquilité, il vous faudra :
 - avoir une connaissance basique de Git,
 - avoir votre propre compte GitHub.
 
-## Exercice commun
+## 1. Exercice commun
 
-### Environnement de développement
+### 1.1. Environnement de développement
 
 Afin de comprendre l'implémentation continue sur un projet, nous allons partir
 d'un exemple concret qui se trouve sur le présent dépôt Git. Pour pouvoir suivre
@@ -31,47 +31,45 @@ Ruby, mais il n'est pas nécessaire de connaître ce langage pour pouvoir suivre
 cet exercice.
 
 En fonction de votre niveau en "ordinateur" :
+
 - si Ruby est déjà installé sur votre ordinateur ou si vous savez gérer
-  l'installation d'un nouveau langage sur votre ordinateur, [suivez ce
-  tutoriel](https://github.com/Ynote/workshop-ci/blob/master/docs/getting-started_FR.md)
+  l'installation d'un nouveau langage sur votre ordinateur, **[suivez ce
+  tutoriel](https://github.com/Ynote/workshop-ci/blob/master/docs/getting-started_FR.md)**
   qui vous permettra de suivre les autres tutoriels de cet atelier directement
   sur votre machine.
 - sinon, si vous n'avez pas envie de vous embarasser avec l'installation d'un
-  nouveau langage ou que vous n'avez pas cette connaissance, [suivez ce tutoriel
-  pour utiliser l'IDE Codeanywhere en
-  ligne](https://github.com/Ynote/workshop-ci/blob/master/docs/codeanywhere-online-IDE-setup_FR.md).
+  nouveau langage ou que vous n'avez pas cette connaissance, **[suivez ce tutoriel
+  pour utiliser l'éditeur de code Codeanywhere en
+  ligne](https://github.com/Ynote/workshop-ci/blob/master/docs/codeanywhere-online-IDE-setup_FR.md).**
   Cela vous permettra de suivre les tutoriels de cet atelier directement via une
   interface web.
 
-### Implémentation de l'intégration continue
+### 1.2. Implémentation de l'intégration continue
 
 Nous vous proposons de mettre en place tous ensemble une intégration continue sur
-ce présent projet avec [Codeship](https://codeship.com/). Le projet de ce dépôt
+ce présent projet avec [CodeShip](https://codeship.com/). Le projet de ce dépôt
 contient :
+
 - un simple fichier écrit en Ruby
   [`hello_world.rb`](https://github.com/Ynote/workshop-ci/blob/master/hello_world.rb),
 - un fichier de test associé
   [`hello_world_spec.rb`](https://github.com/Ynote/workshop-ci/blob/master/hello_world_spec.rb).
 
-[Lançons-nous dans ce tutoriel !](/docs/codeship/basic-ci_FR.md)
+**[Lançons-nous dans ce tutoriel !](/docs/codeship/basic-ci_FR.md)**
 
-## Aller plus loin selon vos envies
+## 2. Modules pour aller plus loin
 
 Nous vous proposons de creuser vous-même les problématiques qui vous
-intéressent. Plusieurs tutoriels sont à votre disposition en fonction de votre
-envie :
+intéressent. Choisissez un tutoriel en fonction de votre envie :
 
-### L'intégration continue sur une petite application avec Heroku
+- [L'automatisation de vos conventions d'écriture avec CodeShip et
+  Danger](https://github.com/Ynote/workshop-ci/blob/master/docs/codeship/automated-pull-request-convention-review_FR.md)
 - [Comprendre le déploiement continu avec
   Heroku](https://github.com/Ynote/workshop-ci/blob/master/docs/heroku/continuous-deployment_FR.md)
-
-### L'intégration continue sur une application de taille moyenne avec Circle CI
-- [Mettre en place un CI basique](https://github.com/Ynote/workshop-ci/blob/master/docs/circle-ci/basic-ci_FR.md)
-- [Mettre en cache les dépendances pour une meilleure performance](https://github.com/Ynote/workshop-ci/blob/master/docs/circle-ci/caching-dependencies_FR.md)
-
-### La revue de code automatique
-- [L'automatisation de vos conventions d'écriture avec Danger et
-  CodeShip](https://github.com/Ynote/workshop-ci/blob/master/docs/codeship/automated-pull-request-convention-review_FR.md)
+- [Mettre en place un CI plus avancé avec
+  CircleCI](https://github.com/Ynote/workshop-ci/blob/master/docs/circle-ci/basic-ci_FR.md)
+- [Mettre en cache les dépendances sur CircleCI pour une meilleure
+  performance](https://github.com/Ynote/workshop-ci/blob/master/docs/circle-ci/caching-dependencies_FR.md)
 
 Si vous êtes ultra motivé·e, nous avons listé [des liens et quelques pistes de
 travail](https://github.com/Ynote/workshop-ci/blob/master/docs/other-resources_FR.md)
