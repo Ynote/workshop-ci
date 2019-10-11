@@ -8,8 +8,10 @@
 - [Getting started with
   Jenkins](https://jenkins.io/doc/pipeline/tour/getting-started/)
 - [Using GitHub Actions](https://lab.github.com/github/hello-github-actions!)
-  (ce tutoriel nécessite de faire partie de s'enregistrer pour
+  (ce tutoriel nécessite de tout d'abord s'enregistrer à
   [GitHub Actions Beta](https://github.com/features/actions/signup/))
+- [Getting started with GitLab
+  CI/CD](https://docs.gitlab.com/ee/ci/quick_start/README.html)
 
 ### Revue de code automatique
 
@@ -22,6 +24,7 @@
 
 Une des étapes pour la livraison et le déploiement continu, c'est de disposer
 d'un script de déployement. Pour écrire ce script :
+
 - noter toutes les étapes manuelles que vous faites pour déployer (build des
   assets, connexion à votre hébergeur, build de l'application, etc.). En
   fonction de votre stack, ces étapes seront plus ou moins difficiles à
@@ -40,6 +43,7 @@ Dans tout code, vous trouverez des conventions d'écriture. [Les
 linters](https://blog.nathanaelcherrier.com/fr/linting-good-practices/) servent
 à encourager ces conventions, voire les forcer. Il existe des linters pour
 multitudes de langages. Voici une liste non-exhaustive :
+
 - HTML
 - CSS
 - JavaScript
