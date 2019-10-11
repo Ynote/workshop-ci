@@ -24,8 +24,8 @@
 
 ### Vérification de la salle
 
-- Vérifier le Wifi,
-- Écrire le code Wifi pour le rendre visible aux participants et participantes,
+- Vérifier le WiFi,
+- Écrire le code WiFi pour le rendre visible aux participants et participantes,
 - Brancher l'ordinateur pour la partie théorique,
 - Organiser les tables en groupes de 4 ou 5 si cela est possible, par niveau,
 - Installer la table d'accueil avec les explications sur la répartition des
@@ -48,7 +48,9 @@
   PRs mergées avec un gif. C’était sympa mais il faut être honnête, pas
   franchement solide comme process.
 
-#### 2. Présentation des objectifs de l'atelier (2 minutes)
+> Vendredi dernier on a déployé 21 fois.
+
+#### 2. Présentation des objectifs de l'atelier (2 minutes) :
   * Mettre en place une intégration continue sur un dépôt Git,
   * Découvrir différents outils d'automatisation,
   * Donner des exemples concrets et en production sur la stack de KissKiss,
@@ -60,7 +62,7 @@
   pour le mettre en place sur une chaine de production dans votre équipe et
   quelques outils utiles d’automatisation.
 
-#### 3. Présentation des étapes de l'atelier : (5 minutes)
+#### 3. Présentation des étapes de l'atelier (5 minutes) : 
   * Présentation rapide théorique (15 minutes),
   * Exercice commun tous ensemble pour comprendre l'intégration continue et sa
     mise en place (50 minutes),
@@ -70,7 +72,7 @@
   * Rétrospective, merci et partage des ressources (10 minutes)
 
 #### 4. Expliquer le principe du Post-It :
-  * Écrire son prénom,
+
   * Le coller sur son ordi pour demander de l'aide,
   * Offrir son aide aux autres si on se sent d'attaque.
 
@@ -108,24 +110,25 @@
  >    qui n'auront pas fini l'exercice avant la pause, reprenez tranquillement
  >    à votre rythme après un petit thé ou un petit café.
  >
- > 4. Avant de commencer le tutoriel, on aimerait bien que vous preniez
+ > 4. Allez sur le lien de ce dépôt Git et suivez les instructions qui
+ >    concernent l'exercice commun.
+ >
+ > 5. Avant de commencer le tutoriel, on aimerait bien que vous preniez
  >    quelques minutes pour vous présenter à votre voisin ou votre voisine.
- >    Pour les personnes qui ne sont pas à l'aise avec l'exercice, dites
+ >    Pour les personnes qui ne sont pas à l'aise avenc l'exercice, dites
  >    simplement votre prénom et pourquoi vous êtes à Paris Web, plus
  >    particulièrement dans cet atelier. Puis, quand vous êtes bien,
  >    lancez-vous dans le tutoriel.
- >
- > 5. Allez sur le lien de ce dépôt Git et suivez les instructions qui
- >    concernent l'exercice commun.
 
 #### 7. Pause :tada:
 
 #### 8. Présenter rapidement les modules personnalisés avant de laisser les participant·es reprendre l'atelier.
 
 #### 9. Rétrospective :
+
 - Qui a réussi à finir un tutoriel ?
 - Est-ce que le concept d'intégration continue est clairement défini
- maintenant pour vous ?
+  maintenant pour vous ?
 - Est-ce que vous avez trouvé ça difficile ?
 - Qui l'a appliqué à son propre projet ?
 
