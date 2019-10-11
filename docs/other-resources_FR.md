@@ -8,8 +8,8 @@
 - [Getting started with
   Jenkins](https://jenkins.io/doc/pipeline/tour/getting-started/)
 - [Using GitHub Actions](https://lab.github.com/github/hello-github-actions!)
-  (ce tutoriel nécessite des autorisations spécifiques pour accéder à vos dépôts
-  GitHub)
+  (ce tutoriel nécessite de faire partie de s'enregistrer pour
+  [GitHub Actions Beta](https://github.com/features/actions/signup/))
 
 ### Revue de code automatique
 
