@@ -74,3 +74,5 @@ intéressent. Choisissez un tutoriel en fonction de votre envie :
 Si vous êtes ultra motivé·e, nous avons listé [des liens et quelques pistes de
 travail](https://github.com/Ynote/workshop-ci/blob/master/docs/other-resources_FR.md)
 pour vous permettre de continuer à améliorer votre intégration continue.
+
+Note: this workshop is very cool!
