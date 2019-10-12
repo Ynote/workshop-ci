@@ -13,6 +13,10 @@ bienvenue.
 
 Et maintenant, commençons !
 
+
+Test intégration continue
+
+
 ## Pré-requis
 
 Pour pouvoir suivre cet atelier en toute tranquilité, il vous faudra :
