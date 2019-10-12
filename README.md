@@ -11,7 +11,7 @@ L'atelier étant préparé dans le cadre de [Paris Web](https://www.paris-web.fr
 2019, le contenu sera entièrement écrit en français. Toute traduction est la
 bienvenue.
 
-Et maintenant, commençons !
+Et maintenant, commençons ! Hop !
 
 ## Pré-requis
 
