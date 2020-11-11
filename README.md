@@ -1,3 +1,5 @@
+> Le dépôt distant `origin` de ce projet est maintenant hébergé sur https://gitlab.com/ynote_hk/workshop-ci.
+
 # Atelier sur l'intégration continue
 
 > This project contains all the documentation needed for a basic workshop on CI
